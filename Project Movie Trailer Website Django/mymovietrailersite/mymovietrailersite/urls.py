@@ -21,4 +21,13 @@ from movietrailer import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index, name='index'),
+    url(r'^genre/', views.genre),
+    url(r'^highestrating/', views.highestrating),
+    url(r'^hotrightnow/', views.hotrightnow),
+    url(r'^latestcollection', views.latestcollection),
+    url(r'^mostliked/', views.mostliked),
+    url(r'^mostowned/', views.mostowned),
+    url(r'^movie/', views.movie),
+    url(r'^favoritecollection/', views.favoritecollection),
+    url(r'^top10', views.top10),
 ]
