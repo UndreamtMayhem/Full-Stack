@@ -1,40 +1,75 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .models import Movie
 
 # Create your views here.
 def index(request):
-    
-    return render(request,'movietrailer/index.html')
-    #return HttpResponse("welcome index")
-
-def genre(request):
-
-    return render(request,'movietrailer/genre.html')
+    #requires an algo and i need to cache these, there is a lot of recycling
+    latest_movies = Movie.objects.order_by('-likes_count')
+    most_owned = Movie.objects.order_by('-owned_count')
+    most_liked = Movie.objects.order_by('-likes_count')
+    context = {'latest_movies': latest_movies, 'most_owned': most_owned, 'most_liked': most_liked}
+    return render(request,'movietrailer/index.html', context)
 
 def highestrating(request):
-     return render(request,'movietrailer/highestrating.html')
+     most_liked = Movie.objects.order_by('-likes_count')
+     context = {'most_liked': most_liked}
+     return render(request,'movietrailer/highest-ratings.html', context)
 
-
-def latestcollection(request):
-     return render(request,'movietrailer/latestcollection.html')
 
 def mostliked(request):
-    return render(request,'movietrailer/mostliked.html')
+    latest_movies = Movie.objects.order_by('-likes_count')
+    most_owned = Movie.objects.order_by('-owned_count')
+    most_liked = Movie.objects.order_by('-likes_count')
+    context = {'latest_movies': latest_movies, 'most_owned': most_owned, 'most_liked': most_liked}
+    return render(request,'movietrailer/most-liked.html',context)
 
 def mostowned(request):
-    return render(request,'movietrailer/mostowned.html')
+    latest_movies = Movie.objects.order_by('-likes_count')
+    most_owned = Movie.objects.order_by('-owned_count')
+    most_liked = Movie.objects.order_by('-likes_count')
+    context = {'latest_movies': latest_movies, 'most_owned': most_owned, 'most_liked': most_liked}
+    return render(request,'movietrailer/most-owned.html',context)
 
 
 def hotrightnow(request):
-     return render(request,'movietrailer/hotrightnow.html')
+    latest_movies = Movie.objects.order_by('-likes_count')
+    most_owned = Movie.objects.order_by('-owned_count')
+    most_liked = Movie.objects.order_by('-likes_count')
+    context = {'latest_movies': latest_movies, 'most_owned': most_owned, 'most_liked': most_liked}
+    return render(request,'movietrailer/hotrightnow.html', context)
 
-def movie(request):
-     return render(request,'movietrailer/movie.html')
 
+def movie(request, movie_id):
+     try:
+        movie = Movie.objects.get(pk=movie_id)
+        context = {'movie': movie}
+     except Movie.DoesNotExist:
+        raise Http404("Question does not exist")
+     return render(request,'movietrailer/movie.html', context)
+
+#requires  new DB tables or just variable
 def favoritecollection(request):
      return render(request,'movietrailer/latestcfavoritecollectionollection.html')
-
+def latestcollection(request):
+     return render(request,'movietrailer/latestcollection.html')
+#requires an algorithm
 def top10(request):
      return render(request,'movietrailer/top10.html')
 
 
+
+
+
+
+######work on 
+
+
+
+def a_z(request):
+     return render(request,'movietrailer/a-z.html')
+
+
+def genre(request):
+
+    return render(request,'movietrailer/genre.html')

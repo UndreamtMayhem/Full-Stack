@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from movietrailer import views
-
+app_name = 'movietrailer'
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index, name='index'),
@@ -27,7 +27,8 @@ urlpatterns = [
     url(r'^latestcollection', views.latestcollection),
     url(r'^mostliked/', views.mostliked),
     url(r'^mostowned/', views.mostowned),
-    url(r'^movie/', views.movie),
+    url(r'^movie/(?P<movie_id>[0-9]+)/$', views.movie),
     url(r'^favoritecollection/', views.favoritecollection),
     url(r'^top10', views.top10),
+    url(r'^a-z', views.a_z),
 ]
