@@ -1,5 +1,4 @@
 # Full-Stack
 
-configue grunt packages
-
-https://git-scm.com/book/en/v1/Git-Basics-Recording-Changes-to-the-Repository
+adjust the template for tablet and pcs 
+Scaffold the rest of the sites 
