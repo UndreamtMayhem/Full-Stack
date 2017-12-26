@@ -1,0 +1,122 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+<div class="container">
+		<form class="text-center" method="POST" action="/round4/">
+			<input class="btn btn-lg btn-primary" type="submit" value="New tournament"/>
+		</form>
+	<div class="row">
+		{% for character in final_round.winners4 %}
+		<div class="col-sm-12 col-md-4">
+			<h2>Tournament Winner</h2>
+			<div class="card">
+				<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h4 class="card-title">{{character.name}}</h4>
+					<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+					<p class="h3">Stats</p>
+					<ul>
+						<li>Strength {{character.strength}}</li>
+						<li>Speed {{character.speed}}</li>
+						<li>Energy Projection {{character.energy_projection}}</li>
+						<li>Fightning Ability {{character.fightning_ability}}</li>
+						<li>mental_power {{character.mental_power}}</li>
+						<li>Inteligence {{character.inteligence}}</li>
+					</ul>
+					<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %} {% for character in final_round.winners3 %}
+		<div class="col-sm-12 col-lg-4">
+			<h2>2nd Placed</h2>
+			<div class="card">
+				<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h4 class="card-title">{{character.name}}</h4>
+					<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+					<p class="h3">Stats</p>
+					<ul>
+						<li>Strength {{character.strength}}</li>
+						<li>Speed {{character.speed}}</li>
+						<li>Energy Projection {{character.energy_projection}}</li>
+						<li>Fightning Ability {{character.fightning_ability}}</li>
+						<li>mental_power {{character.mental_power}}</li>
+						<li>Inteligence {{character.inteligence}}</li>
+					</ul>
+					<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+		{% for character in final_round.winners2 %}
+		<div class="col-sm-12 col-lg-4">
+			<h2>3rd Placed</h2>
+			<div class="card">
+				<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h4 class="card-title">{{character.name}}</h4>
+					<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+					<p class="h3">Stats</p>
+					<ul>
+						<li>Strength {{character.strength}}</li>
+						<li>Speed {{character.speed}}</li>
+						<li>Energy Projection {{character.energy_projection}}</li>
+						<li>Fightning Ability {{character.fightning_ability}}</li>
+						<li>mental_power {{character.mental_power}}</li>
+						<li>Inteligence {{character.inteligence}}</li>
+					</ul>
+					<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+		{% for character in final_round.winners %}
+		<div class="col-sm-12 col-lg-4">
+			<h2>4th Place</h2>
+			<div class="card">
+				<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h4 class="card-title">{{character.name}}</h4>
+					<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+					<p class="h3">Stats</p>
+					<ul>
+						<li>Strength {{character.strength}}</li>
+						<li>Speed {{character.speed}}</li>
+						<li>Energy Projection {{character.energy_projection}}</li>
+						<li>Fightning Ability {{character.fightning_ability}}</li>
+						<li>mental_power {{character.mental_power}}</li>
+						<li>Inteligence {{character.inteligence}}</li>
+					</ul>
+					<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+		{% for character in final_round.losers %}
+		<div class="col-sm-12 col-lg-4">
+			<h2>Last Place</h2>
+			<div class="card">
+				<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h4 class="card-title">{{character.name}}</h4>
+					<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+					<p class="h3">Stats</p>
+					<ul>
+						<li>Strength {{character.strength}}</li>
+						<li>Speed {{character.speed}}</li>
+						<li>Energy Projection {{character.energy_projection}}</li>
+						<li>Fightning Ability {{character.fightning_ability}}</li>
+						<li>mental_power {{character.mental_power}}</li>
+						<li>Inteligence {{character.inteligence}}</li>
+					</ul>
+					<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+	
+	</div>
+</div>
+{% endblock %}

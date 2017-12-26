@@ -1,0 +1,256 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+<section class="menu-section container">
+	<div class="menu-heading">
+		<h4> {{ restaurant.name }} Menus</h4>
+		<h2>Current Selection</h2>
+		<hr/>
+	</div>
+	<div class='pane'>
+		{% with messages = get_flashed_messages() %} {% if messages %}
+
+		<ul>
+			{% for message in messages %}
+			<li> <strong> {{ message }} </strong> </li>
+			{% endfor %}
+		</ul>
+		{% endif %} {% endwith %} {% if items !=[] %}
+		<a href="{{url_for('new_menu_item', restaurant_id = restaurant.id )}}">Create New Item</a>
+		</br>
+		</br>
+		<h2>Appetizers</h2>
+		<ul>
+			{% set indexs = {'i': 1} %}
+			{% for i in items %} {% if i.course == 'Appetizer' %} 
+			{% if indexs.i % 3 == 0 %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column fourth">
+					<h3 class="menu-item-number text-left">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents text-left">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+						<li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+					<!--<figcaption>Caption for above image</figcaption>-->
+				</figure>
+        	</li>{% if indexs.update({'i': 1}) %}{% endif %}
+			{% elif indexs.i %2 == 0 %}{% if indexs.update({'i': 3}) %}{% endif %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column third">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column"></div>
+			</li>
+			{% elif indexs.i %1 == 0 %}{% if indexs.update({'i': 2}) %}{% endif %}
+			<li class="columns menu-columns">
+				<figure class="column menu-column second">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column menu-column menu-text-column text-left is-two-thirds">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<p class="menu-item-text text-left">{{i.price}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+			</li>
+			{% endif %}
+			{% endif %} {% endfor %}
+		</ul>
+		</br>
+		</br>
+		<h2>Entrees</h2>
+		{% set indexs = {'i': 1} %}
+		<ul>
+			{% for i in items %} {% if i.course == 'Entree' %} {% if indexs.i % 3 == 0 %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column fourth">
+					<h3 class="menu-item-number text-left">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents text-left">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+						<li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+					<!--<figcaption>Caption for above image</figcaption>-->
+				</figure>
+        	</li>{% if indexs.update({'i': 1}) %}{% endif %}
+			{% elif indexs.i %2 == 0 %}{% if indexs.update({'i': 3}) %}{% endif %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column third">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column"></div>
+			</li>
+			{% elif indexs.i %1 == 0 %}{% if indexs.update({'i': 2}) %}{% endif %}
+			<li class="columns menu-columns">
+				<figure class="column menu-column second">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column menu-column menu-text-column text-left is-two-thirds">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<p class="menu-item-text text-left">{{i.price}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+			</li>
+			{% endif %}
+			{% endif %} {% endfor %}
+		</ul>
+		</br>
+		</br>
+
+		<h2>Desserts</h2>
+		<ul>
+			{% set indexs = {'i': 1} %}
+
+			{% for i in items %} {% if i.course == 'Dessert' %} 
+			{% if indexs.i % 3 == 0 %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column fourth">
+					<h3 class="menu-item-number text-left">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents text-left">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+						<li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+					<!--<figcaption>Caption for above image</figcaption>-->
+				</figure>
+        	</li>{% if indexs.update({'i': 1}) %}{% endif %}
+			{% elif indexs.i %2 == 0 %}{% if indexs.update({'i': 3}) %}{% endif %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column third">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column"></div>
+			</li>
+			{% elif indexs.i %1 == 0 %}{% if indexs.update({'i': 2}) %}{% endif %}
+			<li class="columns menu-columns">
+				<figure class="column menu-column second">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column menu-column menu-text-column text-left is-two-thirds">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<p class="menu-item-text text-left">{{i.price}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+			</li>
+			{% endif %}
+			{% endif %} {% endfor %}
+		</ul>
+		</br>
+		</br>
+
+		<h2>Beverages</h2>
+		{% set indexs = {'i': 1} %}
+		{% for i in items %} {% if i.course == 'Beverage' %}
+			{% if indexs.i % 3 == 0 %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column fourth">
+					<h3 class="menu-item-number text-left">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents text-left">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+						<li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+					<!--<figcaption>Caption for above image</figcaption>-->
+				</figure>
+        	</li>{% if indexs.update({'i': 1}) %}{% endif %}
+			{% elif indexs.i %2 == 0 %}{% if indexs.update({'i': 3}) %}{% endif %}
+			<li class="columns menu-columns">
+				<div class="column menu-column menu-text-column third">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text">{{i.description}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+				<figure class="column menu-column">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column"></div>
+			</li>
+			{% elif indexs.i %1 == 0 %}{% if indexs.update({'i': 2}) %}{% endif %}
+			<li class="columns menu-columns">
+				<figure class="column menu-column second">
+					<img class="" src="{{restaurant.image}}" alt="placeholder">
+				</figure>
+				<div class="column menu-column menu-text-column text-left is-two-thirds">
+					<h3 class="menu-item-number">{{loop.index}}</h3>
+					<h4 class="menu-ingriedents">{{i.name}}</h4>
+					<p class="menu-item-text text-left">{{i.description}}</p>
+					<p class="menu-item-text text-left">{{i.price}}</p>
+					<ul class="menu-links">
+						<li><a class="menu-link" href='{{url_for('edit_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}'>Edit</li>
+                    <li><a class="menu-link" href='{{url_for('delete_menu_item', restaurant_id = restaurant.id, menu_id=i.id ) }}' >Delete</a></li>
+					</ul>
+				</div>
+			</li>
+			{% endif %}
+			{% endif %} {% endfor %}
+		 {% else %}
+		<p> You currently have no menu items.
+			<p>
+				<a href="{{url_for('new_menu_item', restaurant_id = restaurant.id )}}">Create New Item</a> {% endif %}
+				</br>
+		</br>
+	</div>
+	</section>
+	{% endblock %}
+	<!--http://jinja.pocoo.org/docs/2.10/templates/-->

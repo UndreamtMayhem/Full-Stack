@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ./partials/head.ejs %>
+    <body style="overflow: hidden; ">
+        <% include ./partials/aside.ejs %>
+            <main>
+                <div class="search-bar">
+                    <div class="search-background">
+                        <div>
+                            <button class="hamburger-btn">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+                            <input id="autocomplete" class="search-input" type="text" placeholder="Search Location">
+                            <button class="search-btn">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="list-menu">
+                        <div class='places places-hidden'>
+                            <p class="sized-checkbox">
+                                <label>
+                                    <input type='checkbox' data-bind='checked: displayAdvancedOptions' /> Display advanced options
+                                </label>
+                            </p>
+                            <p class="sized-radio-btn" data-bind='fadeVisible: displayAdvancedOptions'>
+                                Show:
+                                <br />
+                                <label>
+                                    <input type='radio' name="type" value='all' data-bind='checked: typeToShow' />All</label>
+                                <label>
+                                    <input type='radio' name="type" value='visited' data-bind='checked: typeToShow' />Places Visitied</label>
+                                <label>
+                                    <input type='radio' name="type" value='notvisited' data-bind='checked: typeToShow' />Places I like to visit</label>
+                            </p>
+                            <div data-bind='template: { foreach: placesToShow,
+                                beforeRemove: hidePlacesElement,
+                                afterAdd: showPlacesElement }'>
+                                <div data-bind='attr: { "class": "place " + type }, text: name'> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div id="map"></div>
+            <% include ./partials/scripts.ejs %>
+    </body>
+</html>

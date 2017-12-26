@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Item catalog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bulma CSS -->
+    {% block head %}
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bulma-0.6.1/css/bulma.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <ul class="location">
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+            </ul>
+        </nav>
+        {% block tabs %} {% endblock %}
+        <nav class="tabs is-centered">
+            <ul>
+                <li><a href="{{url_for('latest_restaurants')}}">Latest</a></li>
+                <li><a href="{{url_for('menu_restaurants')}}">Restaurants</a></li>
+                <li><a href="{{url_for('about_restaurants')}}">About</a></li>
+                <li><a href="{{url_for('reservations_restaurants')}}">Reservations</a></li>
+                <li><a href="{{url_for('photos_restaurants')}}">Photos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-container ">
+        {% block content %}{% endblock %}
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/restaurant.jpg');
+    background-position: top;
+    background-size: cover;
+    color: #F9A825;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    height: 100vh;
+}
+
+/* main header    */
+header {
+    padding: 10px 10px 0 10px;
+    background-color: white;
+}
+
+.navbar {
+    min-height: 1.25rem;
+}
+
+.navbar-details {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+}
+
+.navbar-details .business-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0 0 3px 0;
+    text-align: center;
+}
+.store-address {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.0rem;
+    letter-spacing: 0.1rem;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+
+}
+.store-address span {
+    line-height: 1.2rem;
+    font-style: normal;
+    font-size: 0.9rem;
+}
+.location {
+    font-size: 0.8rem;
+    padding: 2px 0px 0px 4px;
+    text-transform: uppercase;
+}
+
+.location li {
+    float: left;
+    font-size: 0.72rem;
+    letter-spacing: 0.1rem;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.location li a {
+    color: #F9A825;
+}
+
+.location li a:hover {
+    text-decoration: underline;
+}
+
+
+
+.tabs {
+    background-color: white;
+    
+    padding: 3px;
+}
+
+.tabs ul {
+    border: none;
+    flex-wrap: wrap;
+}
+.tabs ul li {
+    padding: 5px 5px;
+
+}
+.tabs ul li:hover {
+    border-bottom: 1px #F9A825 solid;
+}
+.tabs ul li a {
+    border-bottom: none;
+    color: #F9A825;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    
+}
+
+.main-container {
+    
+    background-color: white;
+}
+
+/* should work */
+.about-section, .carosel-section,  .menu-section, .reservation-section {
+    padding: 0 20px;
+}
+.add-section, .delete-section, .edit-section {
+    padding: 10px 30px;
+}
+/*
+.menu-section {
+    background-color: black;
+    color: white;
+}
+*/
+.about-section, .carosel-section, .edit-section,  .reservation-section, .image-gallery-section  {
+    color: grey;
+    height: 87.8vh;
+}
+.about-section h2, .image-gallery-section h2, .reservation-section h2 {
+    font-size: 2.1rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.image-gallery-section h2 {
+    padding: 0 0 10px 0;
+}
+
+.about-section .columns {
+    padding: 10px;
+}
+
+
+.about-section-location {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 12px;
+
+}
+.about-text-column, .reseveration-text-column {
+    padding: 10px 20px;
+}
+.about-text-column {
+    text-align: center;
+}
+.about-img-container {
+    height: 360px;
+}
+.about-text {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+
+
+
+/* colors https://material.io/color/#!/?view.left=1&view.right=0&primary.color=F9A825*/
+.image-gallery {
+    background-color: black;
+    flex-wrap: wrap;
+
+}
+.image-gallery img {
+    min-width: 305px;
+}
+
+
+.responsive {
+    padding: 0 0px;
+    float: left;
+    margin-bottom: -7px;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 0px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* restraunt  menu  */
+.menu-columns {
+    margin: 0px!important;
+
+}
+.menu-column {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+
+}
+.fourth {
+    align-items: center;
+    flex: none;
+  width: 65.2%;
+
+}
+/* Odd paragraphs */
+.third {
+    align-items: flex-end;
+    padding-right: 11px;
+}
+/*
+li:nth-of-type(2n+1) .menu-column{
+  align-items: flex-end;
+  padding-right: 20px;
+}
+*/
+/* Even paragraphs */
+.second {
+  align-items: flex-start;
+  text-align: right;
+}
+
+/* First paragraph */
+.first{
+  align-items: flex-end;
+}
+
+
+.menu-item-number, .menu-ingriedents, .menu-item-text {
+    margin: 10px;
+
+}
+
+
+.menu-heading {
+    padding: 0px 10px 30px 10px;
+    text-align: center;
+    
+}
+.menu-heading h4 {
+    color: #c17900;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.menu-heading h2 { 
+    font-weight: bold;
+}
+
+.menu-heading hr { 
+    background-color: #c17900;
+    margin: 10px 50px 12px 50px;
+}
+.menu-heading p { 
+    font-size: 0.7rem;
+}
+
+
+
+
+
+.menu-item-number{
+    color: #c17900;
+    font-style: italic;
+}
+.menu-ingriedents {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin:  0 10px 0px 10px;
+    text-transform: uppercase;
+}
+
+.menu-text-column {
+    text-align: right;
+}
+.menu-item-text {
+     font-size: 0.7rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 0 0px;
+    word-spacing: 0.02rem;
+
+}
+.menu-links {
+    margin:  0 10px 10px 10px;
+}
+.menu-link {
+    border-bottom: 2px solid #c17900;
+    color: #c17900;
+    font-size: 0.69rem;
+    font-weight: bold;
+    padding: 0 0 3px 0;
+    text-transform: uppercase;
+}
+
+.text-left {
+    text-align: left!important;
+}
+.hidden {
+    display: none!important;
+}
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+}
+.gallery .item {
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+  background: grey;
+}
+.gallery .controls {
+    background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  padding: 0 20px;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+}
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 1.9em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+}
+.carosel-container {
+    padding: 16px;
+}
+
+.carosel-image {
+    max-height: 100%;
+    max-width: 100%;
+}
+.overlay {
+    background-color: rgba(0,0,0,0.6);
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+
+}
+
+
+.carosel, .sidemenu {
+    padding: 0px;
+}
+.sidemenu {
+    background-color: lightgrey;
+}
+.sidemenu-title {
+    background-color: green;
+    color:white;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+.sidemenu section {
+    color: black;
+    font-size: 0.8rem;
+    font-style: normal;
+    padding:  0 10px;
+    text-align: left;
+}
+.location-addresses {
+    font-size: 0.8rem;
+}
+.location-addresses h3 {
+    font-weight: bold;
+    padding: 5px 0px;
+}
+.location-addresses address {
+    padding: 0 0 8px 0;
+}
+.addresses {
+    font-style: normal;
+}
+.contacts {
+    padding-bottom: 5px;
+}
+.breaker {
+    margin: 0px 50px!important;
+    padding: 0px;
+}
+.address-columns {
+    margin-bottom: 0px!important;
+}

@@ -1,0 +1,60 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+<div class="container-fluid">
+      <h1 class="text-center">Round1</h1>
+      <hr>
+  <div class="row">
+
+    {% for character in characters %} {% if loop.index % 2 == 1 %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">{{character.name}}</h4>
+              <p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+              <p class="h3">Stats</p>
+              <ul>
+                <li>Strength {{character.strength}}</li>
+                <li>Speed {{character.speed}}</li>
+                <li>Energy Projection {{character.energy_projection}}</li>
+                <li>Fightning Ability {{character.fightning_ability}}</li>
+                <li>mental_power {{character.mental_power}}</li>
+                <li>Inteligence {{character.inteligence}}</li>
+              </ul>
+              <p class="card-text">Current Wins {{character.wins}} <br> Current Loses  {{character.loses}}</p>
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <div class="col-sm-12 col-lg-4">
+            <p class="text-center h2">vs</p>
+        </div>
+          <div class="col-sm-12 col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">{{character.name}}</h4>
+              <p>Total Wins {{character.overall_wins}}<br> Total Losses {{character.overall_losses}}</p>
+              <p>Stats</p>
+              <ul>
+                <li>Strength {{character.strength}}</li>
+                <li>Speed {{character.speed}}</li>
+                <li>Energy Projection {{character.energy_projection}}</li>
+                <li>Fightning Ability {{character.fightning_ability}}</li>
+                <li>Inteligence {{character.inteligence}}</li>
+              </ul>
+              <p class="card-text">Current Wins {{character.wins}} <br> Current Loses  {{character.loses}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+    {% endif %} {% endfor %} 
+  </div>
+    <form class="text-center" method="POST" action="/">
+	<input class="btn btn-lg btn-primary" type="submit" value="Simulate Matches"/>
+</form>
+    {% endblock %}

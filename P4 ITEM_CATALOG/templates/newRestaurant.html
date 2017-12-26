@@ -1,0 +1,37 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+<section class="add-section container">
+	<div class="menu-heading">
+		<h1>Create New Restaurant</h1>
+		<hr/>
+	</div>
+	<form action="#" method='post'>
+		<div class="field">
+			<label class="label">Name:</label>
+			<div class="control">
+				<input type='text' size='30' name='name'>
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Description:</label>
+			<div class="control">
+				<input type='text' size='30' name='description'>
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Image:</label>
+			<div class="control">
+				<input type='text' size='30' name='image'>
+			</div>
+		</div>
+		<div class="field is-grouped">
+			<p class="control">
+				<input class="button is-primary" type='submit' value='Create'>
+			</p>
+			<p class="control">
+				<a class="button is-light" href='{{url_for('menu_restaurants')}}'> Cancel </a>
+			</p>
+		</div>
+	</form>
+	{% endblock %}
+</section>

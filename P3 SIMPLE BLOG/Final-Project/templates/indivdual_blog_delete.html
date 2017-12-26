@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<title>Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel=stylesheet type=text/css href="/static/css/recentstyles.css">
+
+<body class="w3-light-grey" style="background:url('/static/images/recentbackground.jpg')">
+	<!-- Image header -->
+	<header class="w3-display-container w3-wide" id="home">
+		<!-- Navigation bar with social media icons -->
+		<nav class="recent-nav w3-bar  w3-hide-small">
+			<a href="/recent" class="w3-bar-item w3-button">Recent</a>
+			<a href="/register" class="w3-bar-item w3-button">Register</a>
+			<a href="#" class="w3-bar-item w3-button">Most Liked</a>
+			<a href="#" class="w3-bar-item w3-button">Tags</a>
+			<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+		</nav>
+		<div class="w3-row w3-padding  w3-border">
+			<div class="w3-container w3-margin w3-panel w3-green">
+				<h2>Are you sure you want to delete this blog.</h2>
+			</div>
+			<!-- Blog entries -->
+			<div class="w3-col l8 s12">
+				<!-- Blog entry -->
+				<div class="w3-container w3-white w3-margin w3-padding-large">
+					<div class="w3-center">
+						<h3>{{single_blog.Blog.title}}</h3>
+						<h5>{{single_blog.Blog.description}} <span class="w3-opacity">{{single_blog.Blog.date_uploaded}}</span></h5>
+					</div>
+					<div class="w3-justify">
+						<img src="/static/blog/uploads/{{single_blog.Blog.image_url}}" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+						<p><strong>{{single_blog.Blog.name}}</strong>{{single_blog.Blog.body}}</p>
+
+						{% if allow_edit %}
+						<form class="w3-container w3-card-4" enctype="multipart/form-data" method='POST'>
+							<p class="w3-left"><button class="w3-button w3-red" type="submit"><b>Delete</b></a></p>
+						</form>
+					{% endif %}
+					</div>
+				</div>
+				<hr>
+				<div>
+				<br>
+				</div>
+				<!-- END BLOG ENTRIES -->
+			</div>
+			<!-- About/Information menu -->
+			<div class="w3-col l4">
+				<!-- About Card -->
+				<div class="w3-white w3-margin">
+					<img src="/static/images/{{single_blog.Users.profile_pic}}" alt="Jane" style="width:100%" class="w3-grayscale about-image">
+					<div class="w3-container w3-black">
+						<h4>{{single_blog.Users.first_name}} {{single_blog.Users.last_name}}</h4>
+						<p>{{single_blog.Users.about}}</p>
+					</div>
+				</div>
+				<!-- END About/Intro Menu -->
+			</div>
+			<!-- END GRID -->
+		</div>
+    </header>
+	<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+	<div class="w3-content" style="max-width:1600px">
+		<!-- Grid -->
+		<!-- END w3-content -->
+	</div>
+
+	<script>
+		// Toggle between hiding and showing blog replies/comments
+		document.getElementById("myBtn").click();
+		function myFunction(id) {
+			var x = document.getElementById(id);
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+
+		function likeFunction(x) {
+			x.style.fontWeight = "bold";
+			x.innerHTML = "✓ Liked";
+		}
+	</script>
+</body>
+
+</html>

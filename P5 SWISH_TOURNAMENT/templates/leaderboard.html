@@ -1,0 +1,28 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+<div class="container-fluid">
+	<h1 class="text-center">Rankings</h1>
+	<div class="row">
+		{% for character in leaderboard %}
+		<div class="col-sm-12 col-lg-3">
+			<div class="card">
+				<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h4 class="card-title h2">{{loop.index}}: {{character.name}}</h4>
+					<p>Total Tournament Wins {{character.overall_wins}} <br> Total Tournment Losses {{character.overall_losses}}</p>
+					<p class="h3">Stats</p>
+					<ul>
+						<li>Strength {{character.strength}}</li>
+						<li>Speed {{character.speed}}</li>
+						<li>Energy Projection {{character.energy_projection}}</li>
+						<li>Fightning Ability {{character.fightning_ability}}</li>
+						<li>mental_power {{character.mental_power}}</li>
+						<li>Inteligence {{character.inteligence}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}

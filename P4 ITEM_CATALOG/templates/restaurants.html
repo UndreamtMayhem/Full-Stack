@@ -1,0 +1,72 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+
+<section class="menu-section container">
+    <div class="menu-heading">
+        <h2>Restaurants</h2>
+        <hr/>
+        <a href="{{url_for('new_restaurant')}}" > <h3> Add a New Restaurant </h3> </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non mollitia, enim dolore id accusantium optio dicta ipsam
+            illo unde soluta ab commodi ex, iste quam quo perspiciatis voluptatem animi provident.</p>
+    </div>
+    <ul>
+
+{% set indexs = {'i': 1} %}
+{% for restaurant in restaurants %}
+
+{% if indexs.i % 3 == 0%}
+{% if indexs.update({'i': 1}) %}{% endif %}
+        <li class="columns menu-columns">
+            <div class="column menu-column menu-text-column fourth">
+                <h3 class="menu-item-number text-left">{{loop.index}}</h3>
+                <h4 class="menu-ingriedents text-left"><a href="{{url_for('show_menu',restaurant_id = restaurant.id)}}">{{restaurant.name}}</a></h4>
+                <p class="menu-item-text text-left">
+                    {{restaurant.description}}
+                </p>
+                <ul class="menu-links">
+                    <li><a class="menu-link" href="{{url_for('edit_restaurant',restaurant_id = restaurant.id)}}">Edit Restaurant</a></li>
+                    <li><a class="menu-link" href = "{{url_for('delete_restaurant',restaurant_id = restaurant.id)}}">Delete Restaurant</a></li>
+                </ul>
+            </div>
+            <figure class="column menu-column">
+                <img class="" src="{{restaurant.image}}" alt="placeholder">
+                <!--<figcaption>Caption for above image</figcaption>-->
+            </figure>
+        </li>
+{% elif indexs.i %2 == 0%}
+{% if indexs.update({'i': 3}) %}{% endif %}
+        <li class="columns menu-columns">
+            <div class="column menu-column menu-text-column third">
+                <h3 class="menu-item-number">{{loop.index}}</h3>
+                <h4 class="menu-ingriedents text-left"><a href="{{url_for('show_menu',restaurant_id = restaurant.id)}}">{{restaurant.name}}</a></h4>
+                <p class="menu-item-text">{{restaurant.description}}</p>
+                    <ul class="menu-links">
+                        <li><a class="menu-link" href="{{url_for('edit_restaurant',restaurant_id = restaurant.id)}}">Edit Restaurant</a></li>
+                        <li><a class="menu-link" href = "{{url_for('delete_restaurant',restaurant_id = restaurant.id)}}">Delete Restaurant</a></li>
+                    </ul>
+            </div>
+            <figure class="column menu-column">
+                <img class="" src="{{restaurant.image}}" alt="placeholder">
+            </figure>
+            <div class="column"></div>
+        </li>
+{% elif indexs.i %1 == 0%}
+    {% if indexs.update({'i': 2}) %}{% endif %}
+        <li class="columns menu-columns">
+            <figure class="column menu-column second">
+                <img class="" src="{{restaurant.image}}" alt="placeholder">
+                <!--<figcaption>Caption for above image</figcaption>-->
+            </figure>
+            <div class="column menu-column menu-text-column text-left is-two-thirds">
+                <h3 class="menu-item-number">{{loop.index}}</h3>
+                <h4 class="menu-ingriedents text-left"><a href="{{url_for('show_menu',restaurant_id = restaurant.id)}}">{{restaurant.name}}</a></h4>
+                <p class="menu-item-text text-left">{{restaurant.description}}</p>
+                    <ul class="menu-links">
+                        <li><a class="menu-link" href="{{url_for('edit_restaurant',restaurant_id = restaurant.id)}}">Edit Restaurant</a></li>
+                        <li><a class="menu-link" href = "{{url_for('delete_restaurant',restaurant_id = restaurant.id)}}">Delete Restaurant</a></li>
+                </ul>
+            </div>
+        </li>
+{%else%}{%endif%}{% endfor %}
+    </ul>
+</section>{% endblock %}

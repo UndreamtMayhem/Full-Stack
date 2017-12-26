@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<title>Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+
+<body class="w3-content w3-black" style="max-width:1500px;">
+  <!-- need some styling -->
+  <nav class="w3-bar w3-black">
+    <a href="/" class="fade-in one w3-bar-item w3-button w3-mobile"><img src="/static/images/blandlogo.png" style="height:25px; width: 25px;"/></a>
+    <a href="/login/" class="fade-in two w3-bar-item w3-button w3-mobile">Login</a>
+    <a href="/register/" class="fade-in three w3-bar-item w3-button w3-mobile">Register</a>
+  </nav>
+  <!-- Header with Slideshow  fix -->
+  <header class="w3-display-container w3-center">
+    <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('login').style.display='block'">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button>
+    <div class="mySlides w3-animate-opacity">
+      <img class="w3-image" src="/static/images/mainpagelook.png" alt="Image 1" style="min-width:500px" width="1500" height="1000">
+      <div class="w3-display-left w3-padding w3-hide-small fade-in one" style="width:35%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+          <h1 class="w3-xlarge fade-in two">Prepare for a more simpler Blogging Experience</h1>
+          <hr class="w3-opacity">
+          <p class="fade-in three">Free of charge and simple to setup</p>
+          <p class="fade-in three"><a class="w3-button w3-block w3-green w3-round" href="/register">Register</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="mySlides w3-animate-opacity">
+      <img class="w3-image" src="/static/images/examplelogin.png" alt="Image 2" style="min-width:500px" width="1500" height="1000">
+      <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+          <h1 class="w3-xlarge w3-text-red"><b>LOGIN!</b> and you will have </h1>
+          <hr class="w3-opacity">
+          <p>Thousands of features to choose from</p>
+          <p><button class="w3-button w3-block w3-green w3-round" onclick="document.getElementById('login').style.display='block'">Login</button></p>
+        </div>
+      </div>
+    </div>
+    <!-- create blog form -->
+    <div class="mySlides w3-animate-opacity">
+      <img class="w3-image" src="/static/images/createblog.png" alt="Image 3" style="min-width:500px" width="1500" height="1000">
+      <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+          <h1 class="w3-xlarge">Get Started</h1>
+          <hr class="w3-opacity">
+          <p>But now you understand our process. Why don't you come on in. Please... please read, understand, and agree to the
+            Tumblr Terms of Service.
+          </p>
+          <p><a class=" w3-button w3-block w3-green w3-round" href="/register">Register</a></p>
+          <p><button class="w3-button w3-block w3-indigo w3-round" onclick="document.getElementById('login').style.display='block'">Login</button></p>
+        </div>
+      </div>
+    </div>
+    <a class="fade-in three w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+    <a class="fade-in three w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+  </header>
+  <div class="w3-bar w3-black ">
+    <h4 class="w3-bar-item w3-button">Like to know more?</h4>
+  </div>
+  <!-- The App Section -->
+  <div class="w3-padding-64 w3-white">
+    <div class="w3-row-padding">
+      <div class="w3-col l8 m6">
+        <h1 class="w3-xxxlarge w3-text-green"><b>Can I use my own domainname?</b></h1>
+        <p><span class="w3-xlarge">Yes!</span> As long as that name isn't taken you can use it. Reserve your domain name now</p>
+        <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('login').style.display='block'">
+        <a href=""><i class="fa fa-user" aria-hidden="true"></i> Get Started</a>
+      </button>
+      </div>
+      <!-- needs to be fixed -->
+      <div class="w3-col l4 m6">
+        <img src="/static/images/exampleblog.png" class="w3-image w3-right w3-hide-small" width="335" height="471">
+        <div class="w3-center w3-hide-large w3-hide-medium">
+          <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('login').style.display='block'">
+          <i class="fa fa-download"></i> Download Application
+        </button>
+          <img src="/w3images/img_app.jpg" class="w3-image w3-margin-top" width="335" height="471">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Clarity Section -->
+  <div class="w3-padding-64 w3-light-grey">
+    <div class="w3-row-padding">
+      <div class="w3-col l4 m6">
+        <img class="w3-image w3-round-large w3-hide-small w3-grayscale" src="/static/images/recentblogexample.png" alt="App" width="335"
+          height="471">
+      </div>
+      <div class="w3-col l8 m6">
+        <h1 class="w3-jumbo"><b>We are all about blogs</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Why use us?</b></h1>
+        <p><span class="w3-xlarge">We believe you should be able to</span> write the blog the way you want. Some blogs suit
+          videos some photos or maybe even both! We are commited to providing as many was as possible for you to share your
+          stories.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Features Section -->
+  <div class="w3-container w3-padding-64 w3-dark-grey w3-center">
+    <h1 class="w3-jumbo"><b>Features</b></h1>
+    <div class="w3-row" style="margin-top:64px">
+      <div class="w3-col s3 ">
+        <i class="fa fa-video-camera w3-text-orange w3-jumbo" aria-hidden="true"></i>
+        <p>Upload VLOGS</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-heart w3-text-red w3-jumbo"></i>
+        <p>Loved by our community</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-camera w3-text-yellow w3-jumbo"></i>
+        <p>Fotos with keep there Clarity</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-camera-retro w3-text-green w3-jumbo" aria-hidden="true"></i>
+        <p>Add Photos to your blogs</p>
+      </div>
+    </div>
+    <div class="w3-row" style="margin-top:64px">
+      <div class="w3-col s3">
+        <i class="fa fa-font w3-text-white w3-jumbo" aria-hidden="true"></i>
+        <p>Text Only Blogs</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-cloud w3-text-blue w3-jumbo"></i>
+        <p>Access your content via our Cloud</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-globe w3-text-amber w3-jumbo"></i>
+        <p>Global we plan to reach as many communties and countries as possible</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-hdd-o w3-text-cyan w3-jumbo"></i>
+        <p>No Storage Limits</p>
+      </div>
+    </div>
+    <div class="w3-row" style="margin-top:64px">
+      <div class="w3-col s3">
+        <i class="fa fa-headphones w3-text-sand w3-jumbo" aria-hidden="true"></i>
+        <p>Podcasts</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-quote-left w3-text-orange w3-jumbo" aria-hidden="true"></i>
+        <p>Make blogs focused on quotes</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-link w3-text-grey w3-jumbo" aria-hidden="true"></i>
+        <p>Add Links</p>
+      </div>
+      <div class="w3-col s3">
+        <i class="fa fa-image w3-text-pink w3-jumbo"></i>
+        <p>HD</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer add my custom social buttons-->
+  <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
+    <div class="w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+  </footer>
+  <!-- Modal -->
+  <div id="login" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('login').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright"
+          title="Close Modal">×</span>
+        <img src="/static/images/userprofile.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+      </div>
+      <form class="w3-container" action="/login/" method='POST'>
+        <div class="w3-section">
+          <label><b>Username</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
+          <label><b>Password</b></label>
+          <input class="w3-input w3-border" type="text" placeholder="Enter Password" name="pw" required>
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+          <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+        </div>
+      </form>
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('login').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+        <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Slideshow
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+</html>

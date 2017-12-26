@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<title>Recent Blogs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+<link rel=stylesheet type=text/css href="/static/css/recentstyles.css">
+<body class="w3-light-grey">
+  {% if current_user.is_authenticated %} {% endif %} {% with messages = get_flashed_messages() %} {% if messages %} {% for
+  message in messages %}
+  <div class="w3-container w3-panel w3-green">
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-yellow w3-large w3-display-topright">&times;</span>
+    <h3>Success!</h3>
+    <p>{{ message }}</p>
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+  <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+  <div class="w3-content" style="max-width:1600px">
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+      <!-- Navigation bar with social media icons -->
+      <nav class="recent-nav w3-bar  w3-hide-small">
+        <a href="/recent" class="w3-bar-item w3-button">Recent</a>
+        <a href="#" class="w3-bar-item w3-button">Most Liked</a>
+        <a href="#" class="w3-bar-item w3-button">Tags</a>
+           {% if current_user.is_authenticated %}
+        <a href="/public/blogs/{{current_user.id }}/" class="w3-bar-item w3-button">Profile</a>
+        <a href="/public/createblog/" class="w3-bar-item w3-button">Create Blog</a>
+        <a href="/logout" class="w3-bar-item w3-button">Logout</a>
+        {% else %}
+        <a href="/login" class="w3-bar-item w3-button">Login</a>
+        {% endif %}
+        <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+      </nav>
+      <img class="w3-image" src="/static/images/recentbackground.jpg" alt="Fashion Blog" width="1600" height="1060">
+      <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>RECENT BLOG POSTS</b></h1>
+        <h1 class="w3-text-white">Current Posts</h1>
+      </div>
+    </header>
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-14 w3-white">
+      <h3>Welcome to the recent blogs from <span class="w3-tag w3-blue">our community</span></h3>
+    </header>
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+      <!-- Blog entries -->
+      <div class="w3-col l8 s12">
+        <!-- Blog entry repeat -->
+        {% for blog in blogs %}
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          <div class="blog-titles">
+            <h3>{{blog.name}}</h3>
+            <h5>{{blog.description}}, <span class="w3-opacity">{{blog.date_uploaded}} </span></h5>
+          </div>
+          <div class="w3-justify">
+            <a href="/public/blogs/{{blog.user.username}}/{{blog.id}}"><img src="/static/blog/uploads/{{blog.image_url}}" alt="Girl Hat" style="width:100%" class="w3-padding-16"></a>
+            <p><strong>{{blog.name}}</strong> {{blog.body}}</p>
+            <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+            <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+            <p class="w3-clear"></p>
+            <!-- future update -->
+            <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              <hr>
+              <div class="w3-col l2 m3">
+                <img src="https://placeimg.com/640/480/any" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>George <span class="w3-opacity w3-medium">May 3, 2015, 6:32 PM</span></h4>
+                <p>Great blog post! Following</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr> {% endfor %}
+        <!-- END BLOG ENTRIES -->
+      </div>
+      <!-- About/Information menu -->
+      <div class="w3-col l4">
+           <!-- Posts -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Popular Posts</h4>
+          </div>
+          <ul class="w3-ul w3-hoverable w3-white">
+            <li class="w3-padding-16">
+              <img src="https://placeimg.com/640/480/any" alt="Lorem" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Lorem</span>
+              <br>
+              <span>Sed mattis nunc</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="https://placeimg.com/640/480/any" alt="Lorem" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Lorem</span>
+              <br>
+              <span>Praes tinci sed</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="https://placeimg.com/640/480/any" alt="Lorem" class="w3-left w3-margin-right" style="width:50px">
+              <span class="w3-large">Workshop</span>
+              <br>
+              <span>Ultricies congue</span>
+            </li>
+            <li class="w3-padding-16">
+              <img src="https://placeimg.com/640/480/any" alt="Lorem" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+              <span class="w3-large">Trends</span>
+              <br>
+              <span>Lorem ipsum dipsum</span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+        {% if current_user.is_authenticated %} {% if curruser %}
+        <!-- About Card -->
+        <div class="w3-white w3-margin">
+          <img src="/static/images/userprofile.png" alt="Jane" style="width:100%" class="w3-grayscale about-image">
+          <div class="w3-container w3-black">
+            <h4>{{ curruser.first_name }} {{ curruser.last_name }}</h4>
+            <p>{{ curruser.about }}!</p>
+            <button class="w3-button w3-black w3-padding-14" id="myBtn"><b>Edit Profile</b></button>
+          </div>
+        </div>
+        <hr>
+        {% endif %} {% endif %}
+        <hr>
+        <!-- Advertising -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Advertisment</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <div class="w3-container w3-display-container w3-section" style="height:200px">
+              <img class="w3-display-middle" src="https://placeimg.com/640/480/any" style="width:80%" alt="advert"/>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+          <div class="w3-container w3-padding w3-black">
+            <h4>Popular Tags</h4>
+          </div>
+          <div class="w3-container w3-white">
+            <p>
+              <span class="w3-tag w3-black w3-margin-bottom">Fashion</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span>              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Hats</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Norway</span>              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sweaters</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Deals</span>              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Accessories</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span>              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+              <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jeans</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trends</span>
+            </p>
+          </div>
+        </div>
+        <hr>
+        <!-- END About/Intro Menu -->
+      </div>
+      <!-- END GRID -->
+    </div>
+    <!-- END w3-content -->
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-dark-grey" style="padding:32px">
+    <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
+  <script>
+    // Toggle between hiding and showing blog replies/comments
+    // fix this evenutally
+    document.getElementById("myBtn").click();
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    function likeFunction(x) {
+      x.style.fontWeight = "bold";
+      x.innerHTML = "✓ Liked";
+    }
+  </script>
+</body>
+</html>

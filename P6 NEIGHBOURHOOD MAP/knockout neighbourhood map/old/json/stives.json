@@ -1,0 +1,94 @@
+{
+    "batchcomplete": "",
+    "continue": {
+        "sroffset": 10,
+        "continue": "-||"
+    },
+    "query": {
+        "searchinfo": {
+            "totalhits": 9643
+        },
+        "search": [
+            {
+                "ns": 0,
+                "title": "St Ives",
+                "size": 1531,
+                "wordcount": 206,
+                "snippet": "going to St <span class=\"searchmatch\">Ives</span>, a nursery rhyme <span class=\"searchmatch\">St</span>. <span class=\"searchmatch\">Ives</span> Compact, a minor Inner Sphere nation in the fictional BattleTech universe <span class=\"searchmatch\">Ives</span>, a surname <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ive</span>, Cornwall",
+                "timestamp": "2017-02-22T18:52:46Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Ives School",
+                "size": 5218,
+                "wordcount": 645,
+                "snippet": "school, see <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> School (academy). The <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> School refers to a group of artists living and working in the Cornish town of <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span>.   The town became",
+                "timestamp": "2016-11-30T13:47:28Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Ives, Cambridgeshire",
+                "size": 36213,
+                "wordcount": 4389,
+                "snippet": "the town in Cornwall, see <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span>, Cornwall. <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> is a market town and civil parish in Cambridgeshire, England. <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> lies approximately 5 miles",
+                "timestamp": "2017-02-16T00:22:45Z"
+            },
+            {
+                "ns": 0,
+                "title": "Tate St Ives",
+                "size": 4967,
+                "wordcount": 451,
+                "snippet": "Tate <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> is an art gallery in <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span>, Cornwall, England, exhibiting work by modern British artists with links to the <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> area. The Tate also took",
+                "timestamp": "2016-12-11T01:34:42Z"
+            },
+            {
+                "ns": 0,
+                "title": "List of St Ives artists",
+                "size": 3382,
+                "wordcount": 240,
+                "snippet": "A list of <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> artists, artists who have resided in the town of <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> in Cornwall, southwest England, are as follows:    John Noble Barlow Thomas",
+                "timestamp": "2017-02-09T00:39:39Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Ives railway station",
+                "size": 7973,
+                "wordcount": 849,
+                "snippet": "confused with the closed <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> railway station in Cambridgeshire. <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> railway station serves the coastal town of <span class=\"searchmatch\">St</span>. <span class=\"searchmatch\">Ives</span>, Cornwall, United Kingdom",
+                "timestamp": "2017-01-11T06:31:45Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Ives Town F.C.",
+                "size": 3356,
+                "wordcount": 290,
+                "snippet": "<span class=\"searchmatch\">St</span>. <span class=\"searchmatch\">Ives</span> Town F.C. is a football club based in <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span>, Cambridgeshire, England. They play in the Southern League Premier Division. This <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> Town should",
+                "timestamp": "2017-01-22T17:42:29Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Ives, Cornwall",
+                "size": 34403,
+                "wordcount": 4214,
+                "snippet": "For village in southeast Cornwall, see <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ive</span>. For other uses, see <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span>. <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span> (Cornish: Porth Ia, meaning &quot;<span class=\"searchmatch\">St</span> Ia's cove&quot;) is a seaside town, civil",
+                "timestamp": "2017-02-22T19:16:45Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Ives (UK Parliament constituency)",
+                "size": 81232,
+                "wordcount": 2543,
+                "snippet": "<span class=\"searchmatch\">St</span>. <span class=\"searchmatch\">Ives</span> is a parliamentary constituency in west Cornwall; it includes the Isles of Scilly . The constituency has been represented in the House of Commons",
+                "timestamp": "2016-12-14T11:14:03Z"
+            },
+            {
+                "ns": 0,
+                "title": "As I was going to St Ives",
+                "size": 9455,
+                "wordcount": 1266,
+                "snippet": "&quot;As I was going to <span class=\"searchmatch\">St</span> <span class=\"searchmatch\">Ives</span>&quot; is a traditional English-language nursery rhyme in the form of a riddle. Its Roud Folk Song Index number is 19772.   The most",
+                "timestamp": "2017-02-24T03:21:34Z"
+            }
+        ]
+    }
+}

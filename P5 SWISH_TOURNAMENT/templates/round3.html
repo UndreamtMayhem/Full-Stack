@@ -1,0 +1,209 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content
+%}
+<div class="container">
+	<h1 class="text-center">With three win</h1>
+	<div class="row">
+		{% for character in round4.winners3 %} {% if loop.index % 2 == 1 %}
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>mental_power {{character.mental_power}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+				{% else %}
+				<div class="col-sm-12 col-md-4">
+					<p class="text-center h2">vs</p>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}}<br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %} {% endfor %}
+	</div>
+
+		<h1 class="text-center">With two win</h1>
+		<div class="row">
+		{% for character in round4.winners2 %} {% if loop.index % 2 == 1 %}
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>mental_power {{character.mental_power}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+				{% else %}
+				<div class="col-sm-12 col-md-4">
+					<p class="text-center h2">vs</p>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}}<br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %} {% endfor %}
+		</div>
+		<h1 class="text-center">With one win</h1>
+		<div class="row">
+		{% for character in round4.winners %} {% if loop.index % 2 == 1 %}
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>mental_power {{character.mental_power}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+				{% else %}
+				<div class="col-sm-12 col-md-4">
+					<p class="text-center h2">vs</p>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}}<br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %} {% endfor %}
+		</div>
+		<h1 class="text-center">No wins</h1>
+		<div class="row">
+		{% for character in round4.losers %} {% if loop.index % 2 == 1 %}
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}} <br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>mental_power {{character.mental_power}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+				{% else %}
+				<div class="col-sm-12 col-md-4">
+					<p class="text-center h2">vs</p>
+				</div>
+				<div class="col-sm-12 col-md-4">
+					<div class="card">
+						<img class="card-img-top" src="/static/img/{{character.image}}" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">{{character.name}}</h4>
+							<p>Total Wins {{character.overall_wins}}<br> Total Losses {{character.overall_losses}}</p>
+							<p class="h3">Stats</p>
+							<ul>
+								<li>Strength {{character.strength}}</li>
+								<li>Speed {{character.speed}}</li>
+								<li>Energy Projection {{character.energy_projection}}</li>
+								<li>Fightning Ability {{character.fightning_ability}}</li>
+								<li>Inteligence {{character.inteligence}}</li>
+							</ul>
+							<p class="card-text">Current Wins {{character.wins}} <br> Current Loses {{character.loses}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %} {% endfor %}
+	</div>
+	<form class="text-center" method="POST" action="/round3/">
+			<input class="btn btn-lg btn-primary" type="submit" value="Simulate Matches"/>
+		</form>
+</div>
+{% endblock %}
