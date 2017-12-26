@@ -1,0 +1,21 @@
+{% extends "movietrailer/headeraside.html" %}
+ {% load static %}
+ {% block content %}
+            <main>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-7">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="text-center">Top 10</h2>
+                        </div>
+                         {% for r in row %}
+                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                             <h2><a href="../year/{{r.1}}">Year {{r.1}}</a></h2>
+                            <a href="../movie/{{r.0}}"><img src="{% static r.3 %} " alt="..." class="img-thumbnail"></a>>
+                            <h3 class="text-center">#{{forloop.counter}}: {{ r.2 }}</h3>
+                        </div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </main>
+        </div>
+{% endblock %}

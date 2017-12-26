@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  include ./includes/head.pug
+  body(data-spy='scroll', data-target='.navbar', data-offset='50')
+    include ./includes/nav.pug
+    main.container
+      include ./includes/about.pug
+      include ./includes/portfolio.pug
+      include ./includes/projects.pug
+      include ./includes/education.pug
+      include ./includes/contact.pug
+      include ./includes/footer.pug
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')   
+    script(src='js/resumeBuilder.js')

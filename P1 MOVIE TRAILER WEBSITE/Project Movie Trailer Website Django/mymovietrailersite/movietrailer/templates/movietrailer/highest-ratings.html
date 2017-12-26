@@ -1,0 +1,30 @@
+{% extends "movietrailer/headeraside.html" %} {% block content %} {% load static %}
+<main>
+    <section class="latest-uploads">
+        <h4>Highest Rating</h4>
+        <div class="card-masonry">
+            {% for ml in most_liked %}
+            <div class="card-block">
+                <div class="image">
+                    <a href="/movie/{{ml.id}}">
+                        <img class="card-img card-img-top" src="{% static 'movietrailer/image/'%}{{ml.cover}}" alt="{{ml.title.strip}}" class="img-thumbnail">
+                    </a>
+                    <div class="carousel-header">
+                        <div class="panel-header header-overlap">
+                            <span>Chart</span>
+                        </div>
+                        <h5 class="rating-titles">
+
+                            <em class="fave-title">{{forloop.counter}}# {{ml.title|truncatechars:16}}</em>
+                        </h5>
+                        <h5 class="rating-titles">
+                            <em class="fave-title">Total Amount of likes {{ml.likes_count}}</em>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

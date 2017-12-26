@@ -1,0 +1,479 @@
+body{
+    background-color: #d3d3d3;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 16px;
+}
+h4, h5 {
+    padding-left: 10px;
+}
+
+ /*    NAV       */
+header.navbar{
+    background-color: #141414!important;
+    box-shadow:-3px 3px 14px #141414;
+    border-bottom: 3px solid #212121;
+    padding: 10px;
+    /*-1px 11px 26px 10px #141414 */
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand {
+    color: white;
+    font-size: 25px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #d3d3d3;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+    color: white;
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.dropdown-menu{
+    background-color: black;
+}
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
+    background-color: darkgray;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+    color: white;
+    background-color: #141414;
+    font-size: 22px;
+}
+.dropdown-menu > li > a {
+    color: white;
+}
+ /*    end of NAV       */
+
+
+main {
+    /* background collor #808080     */
+    /*background-color: #707070;*/
+    background-color: #d3d3d3;
+    /*max-width: 95%;*/
+    margin: 100px auto 0 auto;
+    
+    /*box-shadow: 5px 0px 21px #888888;*/
+}
+.about-header {
+    margin-bottom: 25px;
+    box-shadow: -5px 15px 20px -5px #707070;
+    
+}
+.info-section{
+    text-align: center;
+    background-color: #4c4c4c;
+    color: white;
+    /*box-shadow: 3px 4px 21px #888888;*/
+
+}
+
+.name {
+    color: darkorange;
+    font-weight: bold;
+    padding-right: 15px;
+   
+}
+
+
+.info-box{
+     border-bottom: 10px solid black;
+    
+}
+.info{
+    display: inline-block;
+    text-align: center;
+}
+h3.info {
+    font-size: 30px;
+}
+.profile-pic {
+    border: 2px solid #7a7a7a;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+.btn-grouped {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 0px 0px;
+}
+.about {
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+}
+
+.zocial.icon {
+    margin: 0 5px;
+}
+.skill-list{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 0 ;
+}
+.skill-item{
+    display: inline-block;
+    padding: 10px;
+    font-size: 19px;
+}
+
+
+
+.img-project {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+
+
+
+
+.source-link{
+
+    /*color: dodgerblue!important;*/
+    font-size: 0.9em;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    
+}
+
+
+
+
+
+#full-stack {
+    background-color: #949494;
+    border-bottom: 11px solid #d3d3d3;
+    padding: 10px 0;
+    /*box-shadow: 3px 4px 21px #888888;*/
+   
+}
+#full-stack h4 {
+    padding-left: 15px;
+}
+.type-header {
+border-bottom: 11px solid #d3d3d3;
+padding-bottom: 10px;
+}
+
+
+
+
+.block-element {
+    
+    display: block;
+}
+
+#portfolio{
+    background-color: #949494;
+    padding-bottom: 60px;
+    box-shadow: -5px 15px 20px -5px #707070;
+    margin-bottom: 15px;
+}
+#portfolio h2{
+    margin: 0;
+    padding: 30px 10px 29px 10px;
+    
+}
+#portfolio img{
+    padding: 20px;
+}
+.img-portfolio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    border-bottom: 1px solid black;
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+#projects {
+    box-shadow: -5px 15px 20px -5px #707070;
+    
+    background-color: #EEEEEE;
+    padding:  0 20px 40px 20px;
+}
+#project-current{
+    padding: 20px 0 0 0;
+}
+#project-future{
+    padding: 20px 0 0 0;
+    
+
+}
+.projects-header-title{
+    font-size: 34px;
+    margin: 0px;
+    padding: 20px 5px;
+}
+.project-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+.year {
+    padding-top: 10px;
+    font-size: 18px;
+}
+.languages {
+    font-size: 19px;
+    font-weight: 600;
+    padding-bottom: 35px;
+}
+.project-description {
+    font-size: 19px;
+    padding-top: 15px;
+}
+
+.img-gal{
+    padding: 10px 0 0 0;
+}
+#education{
+    /* box-shadow: -5px 15px 20px -5px #707070; */
+    background-color: #262626;
+    margin-bottom: 15px;
+    
+}
+
+.education-title
+{
+    padding: 20px;
+    color: white;
+}
+.course-title {
+    margin: 0px;
+    padding-bottom: 15px;
+}
+.course-year {
+    font-size: 19px;
+    
+
+}
+.center-element {
+    display: block!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    margin-bottom: 10px!important;
+}
+
+#education-current {
+    
+    position: relative;	
+    border-bottom: 11px solid #d3d3d3;
+    /*box-shadow: -30px 5px 34px -18px rgba(91, 91, 99, 0.95);*/
+
+    color: white;
+    padding-top: 1px;
+}
+#education-future {
+    padding-bottom: 10px;
+    padding-top: 1px;
+    border-bottom: 11px solid #d3d3d3;
+   background-color: darkgray;
+}
+ 
+
+
+.education-description{
+    /*margin: 0 0 40px 0;*/
+    font-size: 18px;
+    padding: 15px 10px 0 10px;
+}
+#front-end{
+
+    padding-bottom: 1px;
+    border-bottom: 11px solid #d3d3d3; 
+     color: white;
+}
+#front-end h3 {
+    border-bottom: 11px solid #d3d3d3;
+    padding-bottom: 10px;
+}
+
+
+#software-development {
+    background-color: #eeeeee;
+    position: relative;	
+    /*box-shadow: -30px 5px 34px -18px rgba(91, 91, 99, 0.95);*/
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+#software-development p {
+    margin: 10px;
+
+
+}
+
+p {
+    text-align: center;
+   /* margin-left: 10px;*/
+}
+
+
+
+/* CONTACT */
+.contact{
+    background-color: white;
+    padding: 0px 0px 16px 0px;
+    /*max-width: 95%;*/
+    margin: 0 auto;
+    margin-bottom: 20px;
+     box-shadow: 5px 0px 21px #888888;
+}
+.contact-header{
+    padding: 0px 0px;
+    margin: 0px;
+}
+.contact-title{
+    margin: 10px;
+    padding: 10px;
+}
+
+.social-buttons{
+    margin: 10px 10px 30px 0px;
+}
+
+
+
+.btn{
+    border: 0px;
+}
+i {
+ color: white!important;
+}
+
+.social-text {
+    color: white;
+    padding-left: 5px;
+    text-transform: capitalize;
+}
+.facebook{
+ background-color: #3b5998;
+
+}
+
+.google {
+    background-color: rgb(197,67,51);
+ 
+}
+.twitter{
+    background-color: #2ca9e1;
+ 
+}
+.email{
+    background-color: #2eb897;
+     
+
+}
+.instagram{
+    background-color: rgb(191,3,152);
+}
+.linkedin{
+    background-color: #007292;
+
+}
+.github > i{
+    color: black!important;
+
+}
+.github{
+    background-color: #ECECEC;
+    color: black!important;
+}
+.tumblr{
+    background: #56BC8A;
+}
+.social-text{
+    padding-left: 10px;
+    color: white;
+}
+.social-button-left, social-button-right {
+    padding-bottom: 7px;
+}
+
+.social-info {
+    padding: 10px;
+}
+/*  FOOTER */
+footer{
+    /*max-width: 95%;*/
+    margin: 0 auto;
+    box-shadow: 5px 0px 21px #888888;
+
+}
+#top-footer{
+    background-color: #4c4c4c;
+    box-shadow: 5px 0px 21px #888888;
+    color: white;
+}
+
+.site-nav{
+    background-color: white;
+
+}
+.footer-sitenav {
+    border-bottom: 11px solid #d3d3d3;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-evenly;
+    padding-left: 0px;
+    padding-top: 15px;
+    padding-bottom: 9px;
+    /*padding-left: 150px;*/
+}
+
+.footer-sitenav ul {
+    padding-left: 0px;
+}
+
+
+
+.sitenav-item{
+    display: inline;
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+#bottom-footer {
+    background-color: black;
+    box-shadow: 5px 0px 21px #888888;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+#bottom-footer span {
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+.rights p {
+    /*padding-bottom: 10px;*/
+    font-size: 20px;
+}
+
+ /* End of FOOTER */
+
+.btn-default:hover{
+    /* animate  
+    background-color: inherit;
+    */
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+.sitenav-item a {
+    color: white;
+}

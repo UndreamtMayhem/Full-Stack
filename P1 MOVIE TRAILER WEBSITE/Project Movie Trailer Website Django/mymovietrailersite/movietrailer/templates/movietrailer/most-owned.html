@@ -1,0 +1,30 @@
+{% extends "movietrailer/headeraside.html" %} {% block content %} {% load static %}
+<main>
+    <section class="latest-uploads">
+        <h4>Most Owned</h4>
+        <div class="card-masonry">
+            {% for mo in most_owned %}
+            <div class="card-block">
+                <div class="image">
+                    <a href="/movie/{{m0.id}}">
+                        <img class="card-img card-img-top" src="{% static 'movietrailer/image/'%}{{mo.cover}}" alt="{{mo.title.strip}}" class="img-thumbnail">
+                    </a>
+                    <div class="carousel-header">
+                        <div class="panel-header header-overlap">
+                            <span>Chart</span>
+                        </div>
+                        <h5 class="rating-titles">
+                            <em class="fave-title">{{forloop.counter}}# {{mo.title|truncatechars:16}}</em>
+
+                        </h5>
+                        <h5 class="rating-titles">
+                            <em class="fave-title">Total Owned {{mo.owned_count}}</em>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}

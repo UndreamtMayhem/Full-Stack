@@ -1,0 +1,22 @@
+header.about-header
+    #about.info-section.container-fluid
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              h1.info.name.text-center Daniel Johnson:
+              h3.info Web Developer - Front-End
+          .row
+            img.img-circle.img-responsive.profile-pic.hidden-xs.hidden-sm(src='./img/' + about.image, alt='')
+          .row
+            .btn-grouped
+              each but in about.links
+                a.zocial.icon(class=but.name, href=but.url)
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              h2 Profile
+              p.about=about.description
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              h2 Technical Skills
+              ul.skill-list
+                each skill in about.skills
+                  li.skill-item=skill

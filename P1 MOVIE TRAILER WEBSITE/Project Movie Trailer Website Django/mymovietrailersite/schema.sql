@@ -1,0 +1,20 @@
+BEGIN;
+DELETE FROM "django_session";
+DELETE FROM "movietrailer_movie";
+DELETE FROM "auth_group_permissions";
+DELETE FROM "auth_user_user_permissions";
+DELETE FROM "movietrailer_latest_favoritecollection";
+DELETE FROM "movietrailer_movie_reviews";
+DELETE FROM "django_admin_log";
+DELETE FROM "auth_user";
+DELETE FROM "movietrailer_movies_owned";
+DELETE FROM "django_content_type";
+DELETE FROM "movietrailer_movies_liked";
+DELETE FROM "movietrailer_latest_arrivals";
+DELETE FROM "movietrailer_home_page_covers";
+DELETE FROM "auth_user_groups";
+DELETE FROM "auth_permission";
+DELETE FROM "auth_group";
+DELETE FROM "movietrailer_user_profile";
+
+COMMIT;

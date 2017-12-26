@@ -1,0 +1,26 @@
+{% extends "movietrailer/headeraside.html" %} {% block content %} {% load static %}
+<main>
+    <section class="latest-uploads">
+        <h4>Genres</h4>
+        <div class="card-masonry">
+            {% for col in available_genres %}
+            <div class="card-block">
+                <div class="image">
+                    <a href="../genre/{{col.2}}">
+                        <img class="card-img card-img-top" src="{% static 'movietrailer/image/'%}{{col.3 }}" alt="{{col.1}}" class="img-thumbnail">
+                    </a>
+                    <div class="carousel-header">
+                        <div class="panel-header header-overlap">
+                            <span>Genre</span>
+                        </div>
+                        <h5 class="rating-titles">
+                            <em class="fave-title">{% filter upper %}{{col.2}} {% endfilter %}</em>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}
