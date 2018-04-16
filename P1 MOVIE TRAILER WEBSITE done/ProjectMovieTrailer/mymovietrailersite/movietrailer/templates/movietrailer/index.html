@@ -1,0 +1,274 @@
+ {% extends "movietrailer/headeraside.html" %} {% block content %} {% load static %} {% load mathfilters %}
+<section class="moviegallery">
+    <div class="movieCarousel d-none d-md-flex">
+        <div id="movieCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                {% for upload in latestuploads %} {% with my_var=forloop.counter %} {% if forloop.counter == 1 %}
+                <li data-target="#carousel-id" data-slide-to="{{ forloop.counter |sub:1 }}" class="active"></li>
+                {% else %}
+                <li data-target="#carousel-id" data-slide-to="{{ forloop.counter |sub:1  }}" class=""></li>
+                {% endif %} {% endwith %} {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+                {% for upload in latestuploads %} {% if forloop.counter == 1 %}
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static 'movietrailer/image/'%}{{upload.cover}}" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!--<h3>{{ upload.title }}</h3>-->
+                    </div>
+                </div>
+                {% else %}
+                <div class="carousel-item">
+                    <img class="d-block w-100" alt="{{upload.title}}" src="{% static 'movietrailer/image/'%}{{upload.cover}}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!--<h1>{{ upload.title|truncatechars:17}}</h1>-->
+                    </div>
+                </div>
+                {% endif %} {% endfor %}
+
+            </div>
+            <a class="carousel-control-prev" href="#movieCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#movieCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="carousel-header">
+            <div class="panel-header">
+                <span>Trailer</span>
+            </div>
+            <h4>New Arrivals</h4>
+        </div>
+    </div>
+    <!-- most liked -->
+    {% for ml in most_liked %} {% if forloop.counter == 1 %}
+    <div class="main-card">
+        <div class="main-image ">
+            <a href="mostliked/">
+                <img class=" main-img card-img-top" src="{% static 'movietrailer/image/'%}{{ml.cover}}" alt="{{ml.cover.strip}}" class="img-thumbnail">
+            </a>
+            <div class="carousel-header">
+                <div class="panel-header">
+                    <span>Chart</span>
+                </div>
+                <h4>Most Liked</h4>
+            </div>
+        </div>
+    </div>
+    {% endif %} {% endfor %}
+
+    <!-- highestrating -->
+    {% for fave in my_fave_collection %} {% if forloop.counter == 1 %}
+    <div class="main-card">
+        <div class="main-image ">
+            <a href="highestrating/">
+                <img class=" main-img card-img-top" src="{% static 'movietrailer/image/'%}{{fave.movie.cover}}" alt="{{fave.movie.title.strip}}" class="img-thumbnail">
+            </a>
+            <div class="carousel-header">
+                <div class="panel-header">
+                    <span>Chart</span>
+                </div>
+                <h4>Highest Rated Movies</h4>
+            </div>
+        </div>
+    </div>
+    {% endif %} {% endfor %}
+    <!-- end of section -->
+</section>
+<aside class="stats d-none d-md-flex ">
+    <div class="movie-table-rating">
+        <a class="view-all" href="">View All
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </a>
+        <h4>Highest Rating</h4>
+        <table class="table">
+            <tbody>
+                {% for ml in most_liked %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                        <a href="movie/{{ml.id}}">{{ml.title}}</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="view-all" href="">View All
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </a>
+
+        <h4>Most Owned</h4>
+        <table class="table">
+            <tbody>
+                {% for mo in most_owned %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>
+                        <i class="fa fa-file-video-o" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                        <a href="movie/{{mo.id}}">{{mo.title}}</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="movie-table-rating">
+        <a class="view-all" href="">View All
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </a>
+
+        <h4>Most Liked</h4>
+
+        <table class="table">
+            <tbody>
+                {% for ml in most_liked %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                        <a href="movie/{{ml.id}}">{{ml.title}}</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <h4>Advert</h4>
+        <img class="advert-carousel img-fluid" src="{% static 'movietrailer/image/adverts/carousel-advert.png'%}" alt="">
+
+    </div>
+    <div class="movie-table-rating">
+        <h4>Advert</h4>
+        <img class="advert-carousel img-fluid" src="{% static 'movietrailer/image/adverts/carousel-advert1.png'%}" alt="">
+
+    </div>
+
+</aside>
+
+
+
+
+
+<section class="movie-collection">
+
+    <h4>Our Movie Collection</h4>
+    <div class="card-masonry">
+
+        {% for cover in home_page_covers %} {% if forloop.counter == 1 %}
+        <div class="card-block">
+            <div class="image">
+                <a href="top10/">
+                    <img class=" card-img card-img-top" src="{% static 'movietrailer/image/'%}{{cover.movie.cover}}" alt="{{cover.strip}}" class="img-thumbnail">
+                </a>
+                <p class="image-text">Top 10</p>
+            </div>
+
+        </div>
+        {% elif forloop.counter == 2 %}
+        <div class="card-block">
+            <div class="image">
+                <a href="a-z/">
+                    <img class=" card-img card-img-top" src="{% static 'movietrailer/image/'%}{{cover.movie.cover}}" alt="{{cover.strip}}" class="img-thumbnail">
+                </a>
+                <p class="image-text">A-Z</p>
+            </div>
+        </div>
+        {% elif forloop.counter == 3 %}
+        <div class="card-block">
+            <div class="image">
+                <a href="genres/">
+                    <img class="card-img card-img-top" src="{% static 'movietrailer/image/'%}{{cover.movie.cover}}" alt="{{cover.strip}}" class="img-thumbnail">
+                </a>
+                <p class="image-text">Genres</p>
+            </div>
+        </div>
+
+        {% elif forloop.counter == 4 %}
+        <div class="card-block">
+            <div class="image">
+                <a href="years/">
+                    <img class="card-img card-img-top" src="{% static 'movietrailer/image/'%}{{cover.movie.cover}}" alt="{{cover.strip}}" class="img-thumbnail">
+                </a>
+                <p class="image-text">Year</p>
+
+            </div>
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="favorite-collection">
+
+    <h4>My favorite Collection</h4>
+
+    <div class="card-masonry">
+
+        {% for fave in my_fave_collection %}
+
+        <div class="main-card fave-card">
+            <div class="main-image fave-image">
+                <a href="/movie/{{fave.movie.id}}">
+                    <img class="card-img card-img-top img-thumbnail" src="{% static 'movietrailer/image/'%}{{fave.movie.cover}}" alt="{{fave.movie.title|cut:" "}}">
+                </a>
+                <div class="carousel-header">
+                    <div class="panel-header header-overlap">
+                        <span>Chart</span>
+                    </div>
+                    <h5>
+                        <em class="fave-title">{{fave.chartposition}}# {{fave.movie.title}}</em>
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+
+        {% endfor %}
+    </div>
+    </div>
+
+</section>
+<section class="latest-uploads">
+    <h4>Latest from our Collection</h4>
+    <div class="card-masonry">
+
+        {% for ten in ten_latest_uploads %}
+        <div class="card-block">
+            <div class="image">
+                <a href="/movie/{{ten.id}}">
+                    <img class=" card-img card-img-top" src="{% static 'movietrailer/image/'%}{{ten.cover}}" alt="{{ten.title}}" class="img-thumbnail">
+                </a>
+                <p class="image-text">{{ten.title.strip|truncatechars:16}}</p>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<div class="advert-container">
+    <img class="advert-banner img-fluid" src="{% static 'movietrailer/image/adverts/advert-banner.png'%}" alt="">
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+// clean db 
+django-admin.py flush
+
+// populate data
+django-admin.py loaddata db.json
+
+
+ 
