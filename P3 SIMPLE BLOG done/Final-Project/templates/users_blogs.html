@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+{% import 'partials/head.html' as head_macro %} {{ head_macro.head_component("Users blogs") }}
+
+
+<body class="w3-light-grey">
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+        {% import 'partials/nav.html' as nav_macro %} {{ nav_macro.nav_component(current_user) }} {% import 'partials/profile_card.html' as profilecard_macro %} {% for user in blogs %} {% if loop.index == 1 %} {{ profilecard_macro.profilecard_component(user)
+        }} {% endif %} {% endfor %}
+    </header>
+
+    <header class="w3-container w3-center w3-padding-14 w3-white">
+        <h3>Welcome to the recent blogs from
+            <span class="w3-tag w3-blue">our community</span>
+        </h3>
+    </header>
+
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+        <div class="w3-col l8 s12">
+            <!-- Blog entries -->
+
+            {% import 'partials/edit_blog.html' as edit_blog_macro %} {% for blog in blogs %} {{ edit_blog_macro.edit_blog_component(blog, allow_edit) }} {% endfor %}
+
+            <!-- END BLOG ENTRIES -->
+        </div>
+        <!-- About/Information menu -->
+        <div class="w3-col l4">
+            <!-- Advertising -->
+            <div class="w3-white w3-margin">
+                {% import 'partials/advertising.html' as advertising_macro %} {{ advertising_macro.advertising_component() }}
+
+            </div>
+            <hr>
+            <!-- Follow -->
+            <div class="w3-white w3-margin">
+                {% import 'partials/follow.html' as follow_macro %} {{ follow_macro.follow_component() }}
+
+            </div>
+            {% for user in blogs %} {% if loop.index == 1 %}
+            <!-- About Card -->
+            <div class="w3-white w3-margin">
+                <img src="/static/images/{{user.Users.profile_pic}}" alt="blog" style="width:100%" class="w3-grayscale about-image">
+                <div class="w3-container w3-black">
+                    <h4>{{user.Users.first_name}} {{user.Users.last_name}}</h4>
+                    <p>{{user.Users.about}}</p>
+                </div>
+            </div>
+            <hr> {% endif %} {% endfor %}
+            <!-- Posts -->
+            <div class="w3-white w3-margin">
+                {% import 'partials/popular_posts.html' as popular_posts_macro %} {{ popular_posts_macro.popular_posts_component() }}
+            </div>
+            <hr>
+            <!--TODO Tags -->
+            <div class="w3-white w3-margin">
+                {% import 'partials/tags.html' as tags_macro %} {{ tags_macro.tags_component() }}
+            </div>
+            <hr>
+            <!-- Inspiration -->
+            <div class="w3-white w3-margin">
+                {% import 'partials/inspiration.html' as inspiration_macro %} {{ inspiration_macro.inspiration_component() }}
+
+
+            </div>
+            <hr>
+            <!-- FOLLOW MECHANISM -->
+            <div class="w3-white w3-margin">
+                {% import 'partials/users_socials.html' as users_socials_macro %} {% for user in blogs %} {% if loop.index == 1 %} {{ users_socials_macro.users_socials_component(user) }} {% endif %} {% endfor %}
+                <!-- END About/Intro Menu -->
+            </div>
+            <!-- END GRID -->
+        </div>
+        <!-- END w3-content -->
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribe" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content" style="padding:32px">
+            <div class="w3-container w3-white">
+                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+                <p>
+                    <input class="w3-input w3-border" type="text" placeholder="Enter e-mail">
+                </p>
+                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey" style="padding:32px">
+        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    </footer>
+
+</body>
+
+</html>

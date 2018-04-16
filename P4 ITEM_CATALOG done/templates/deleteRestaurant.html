@@ -1,0 +1,20 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content %}
+
+<section class="delete-section container">
+    <h1> Are you sure you want to delete </h1>
+    <form action="#" method='post'>
+        <div class="field">
+            <label class="label">{{restaurant.name }}?</label>
+        </div>
+        <div class="field is-grouped">
+            <p class="control">
+                <input class="button is-primary" type='submit' value='Delete'>
+            </p>
+            <p class="control">
+                <a class="button is-light" href='{{url_for(' menu_restaurants ')}}'> Cancel </a>
+            </p>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

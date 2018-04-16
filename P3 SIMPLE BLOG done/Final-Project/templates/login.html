@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% import 'partials/head.html' as head_macro %} {{ head_macro.head_component("Login") }}
+
+<body>
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+        {% import 'partials/header_login_register.html' as header_macro %} {{ header_macro.header_component(messages) }}
+
+        <div class="w3-display-topmiddle w3-padding-large">
+            <h1 class="w3-jumbo w3-text-white w3-hide-small">
+                <b>Login</b>
+            </h1>
+            <div class="w3-container w3-margin-top w3-gray">
+                {% import 'partials/forms/login_form.html' as loginform_macro %} {{ loginform_macro.login_component() }}
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

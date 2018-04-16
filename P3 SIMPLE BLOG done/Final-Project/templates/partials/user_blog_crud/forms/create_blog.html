@@ -1,0 +1,35 @@
+{% macro createblog_component(blog) %}
+
+<form class="w3-container w3-card-4" enctype="multipart/form-data" method='POST'>
+    <p>
+        <label for="title">title</label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" name='title' id='title' style="width:90%" required>
+    </p>
+    <p>
+        <input class="w3-input" type='text' name='body' id='body' placeholder='body' style="width:90%" required>
+        <label for="body">body</label>
+    </p>
+    <p>
+        <input class="w3-input" name='caption' id='caption' placeholder='caption' style="width:90%" required>
+        <label for="caption">caption</label>
+    </p>
+    <p>
+        <input class="w3-input" name='description' id='description' placeholder='description' style="width:90%" required>
+        <label for="description">description</label>
+    </p>
+    <p>
+        <input class="w3-input" type="text" name='name' id='name' placeholder='name' style="width:90%" required>
+        <label for="name">Name</label>
+    </p>
+    <p>
+        <label for="public">Make Blog Public</label>
+        <select class="w3-select" name='public' id='public'>
+    <option value="True"selected>Yess</option>
+    <option value="False">No</option>
+</select>
+    </p>
+    <p><input type=file name=file></p>
+    <p>
+        <button class="w3-button w3-section w3-teal w3-ripple"> Submit </button></p>
+</form>
+{% endmacro %}

@@ -1,0 +1,16 @@
+{% macro nav_component(current_user) -%}
+
+<nav class="recent-nav w3-bar  w3-hide-small">
+    <a href="{{url_for('recent')}}" class="w3-bar-item w3-button">Recent</a>
+    <a href="{{url_for('popular')}}" class="w3-bar-item w3-button">Most Liked</a>
+    <a href="{{url_for('tags')}}" class="w3-bar-item w3-button">Tags</a> {% if current_user.is_authenticated %}
+    <a href="{{url_for('users_blogs',domain =current_user.id )}}" class="w3-bar-item w3-button">Profile</a>
+    <a href="{{url_for('createblog')}}" class="w3-bar-item w3-button">Create Blog</a>
+    <a href="{{url_for('logout')}}" class="w3-bar-item w3-button">Logout</a> {% else %}
+    <a href="{{url_for('login')}}" class="w3-bar-item w3-button">Login</a> {% endif %}
+    <a href="#" class="w3-bar-item w3-button w3-right">
+        <i class="fa fa-search"></i>
+    </a>
+</nav>
+
+{%- endmacro %}

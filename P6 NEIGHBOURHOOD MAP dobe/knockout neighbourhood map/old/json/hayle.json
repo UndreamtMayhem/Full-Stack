@@ -1,0 +1,94 @@
+{
+    "batchcomplete": "",
+    "continue": {
+        "sroffset": 10,
+        "continue": "-||"
+    },
+    "query": {
+        "searchinfo": {
+            "totalhits": 2608
+        },
+        "search": [
+            {
+                "ns": 0,
+                "title": "Hayle",
+                "size": 28630,
+                "wordcount": 3667,
+                "snippet": "<span class=\"searchmatch\">Hayle</span> (Cornish: Heyl, lit. &quot;estuary&quot;) is a small town, civil parish and cargo port in west Cornwall, England, United Kingdom. It is situated at the mouth",
+                "timestamp": "2017-02-04T14:46:41Z"
+            },
+            {
+                "ns": 0,
+                "title": "River Hayle",
+                "size": 4654,
+                "wordcount": 300,
+                "snippet": "The River <span class=\"searchmatch\">Hayle</span> (Cornish: Heyl, meaning estuary) is a small river in west Cornwall, England, UK which issues into St Ives Bay at <span class=\"searchmatch\">Hayle</span> on Cornwall's Atlantic",
+                "timestamp": "2015-03-28T10:58:25Z"
+            },
+            {
+                "ns": 0,
+                "title": "Hayle railway station",
+                "size": 4523,
+                "wordcount": 304,
+                "snippet": "Not to be confused with Hale railway station. <span class=\"searchmatch\">Hayle</span> railway station serves the small town of <span class=\"searchmatch\">Hayle</span>, Cornwall, United Kingdom. Great Western Railway manage",
+                "timestamp": "2016-12-13T00:50:31Z"
+            },
+            {
+                "ns": 0,
+                "title": "John Harvey (ironfounder)",
+                "size": 18466,
+                "wordcount": 1056,
+                "snippet": "engineer at Carnhell Green near <span class=\"searchmatch\">Hayle</span>, in west Cornwall. In 1779 he established a foundry and engineering works at <span class=\"searchmatch\">Hayle</span> called Harvey &amp; Co. By 1800 the",
+                "timestamp": "2016-09-03T22:04:58Z"
+            },
+            {
+                "ns": 0,
+                "title": "Hayle Estuary",
+                "size": 1245,
+                "wordcount": 112,
+                "snippet": "   The <span class=\"searchmatch\">Hayle</span> Estuary (Cornish: Heyl, meaning estuary) is an estuary in west Cornwall, England, United Kingdom. The estuary of the River <span class=\"searchmatch\">Hayle</span> consists",
+                "timestamp": "2015-09-19T11:30:57Z"
+            },
+            {
+                "ns": 0,
+                "title": "Hayle Community School",
+                "size": 2415,
+                "wordcount": 57,
+                "snippet": "<span class=\"searchmatch\">Hayle</span> Community School is a coeducational community secondary school located in <span class=\"searchmatch\">Hayle</span> in the English county of Cornwall. As a community school, <span class=\"searchmatch\">Hayle</span>",
+                "timestamp": "2016-12-24T16:49:26Z"
+            },
+            {
+                "ns": 0,
+                "title": "Hayle Railway",
+                "size": 24617,
+                "wordcount": 3711,
+                "snippet": "The <span class=\"searchmatch\">Hayle</span> Railway was an early railway in West Cornwall, constructed to convey copper and tin ore from the Redruth and Camborne areas to sea ports at",
+                "timestamp": "2017-01-31T12:20:46Z"
+            },
+            {
+                "ns": 0,
+                "title": "St Michael's Hospital, Hayle",
+                "size": 2206,
+                "wordcount": 177,
+                "snippet": "180\u00b0N 5.424\u00b0W\ufeff / 50.180; -5.424 St Michael's Hospital, <span class=\"searchmatch\">Hayle</span> is a small hospital located in <span class=\"searchmatch\">Hayle</span>, Cornwall, United Kingdom run by Royal Cornwall Hospitals",
+                "timestamp": "2016-08-30T13:52:04Z"
+            },
+            {
+                "ns": 0,
+                "title": "Hayle Ibrahimov",
+                "size": 9712,
+                "wordcount": 724,
+                "snippet": "<span class=\"searchmatch\">Hayle</span> Ibrahimov (Amharic: \u1240\u12f3\u121b\u12ca \u12f0\u1235\u1273 \u1203\u130e\u1235? \u2013 Haile Desta Hagos; born 18 January 1990) is Ethiopia-born Azerbaijani international middle and long distance",
+                "timestamp": "2016-11-19T17:45:56Z"
+            },
+            {
+                "ns": 0,
+                "title": "Hayle Power Station",
+                "size": 5564,
+                "wordcount": 648,
+                "snippet": "<span class=\"searchmatch\">Hayle</span> Power Station was a coal-fired power station situated at the mouth of the River <span class=\"searchmatch\">Hayle</span>, at <span class=\"searchmatch\">Hayle</span> in Cornwall, South West England.  On 13 March 1910",
+                "timestamp": "2017-02-06T10:27:28Z"
+            }
+        ]
+    }
+}

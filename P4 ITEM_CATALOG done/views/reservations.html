@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block content %}
+
+<section class="reservation-section container">
+    <h2>Reservation</h2>
+    <p class="about-section-location">479 474 2928 Restraunt</p>
+    <div class="columns">
+        <div class="column reseveration-text-column">
+
+            <form action="">
+                <div class="field">
+                    <label class="label" for="name">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" placeholder="e.g Alex Smith">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="email">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" name="email" placeholder="e.g. alexsmith@gmail.com">
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="control is-expanded  field-label is-normal">
+                        <label class="label" for="location">Location</label>
+                        <div class="select">
+                            <select name="location">
+                                <option>London</option>
+                                <option>Paris</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-label is-normal">
+                        <label class="label" for="guests">Guest</label>
+                        <div class="control">
+                            <input class="input" type="number" min="1" max="8" name="guests" placeholder="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="info">Additional Infomation</label>
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <textarea class="textarea" name="info"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="button is-primary about-button">Submit</a>
+            </form>
+        </div>
+        <figure class="column">
+            <img class="about-img-container" src="../static/img/map.png" alt="map location">
+        </figure>
+
+    </div>
+</section>
+{% endblock %}

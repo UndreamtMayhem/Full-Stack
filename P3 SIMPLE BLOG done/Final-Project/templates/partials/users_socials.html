@@ -1,0 +1,26 @@
+{% macro users_socials_component(user) %}
+
+<div class="w3-container w3-padding w3-black">
+    <h4>Follow Me</h4>
+</div>
+<div class="w3-container w3-xlarge w3-padding">
+    <a href="{{ user.Users.facebook_link }}">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    </a>
+    <a href="/">
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+    <a href="{{ user.Users.snapchat_link }}">
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+    </a>
+    <a href="{{ user.Users.pininterest_link }}">
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    </a>
+    <a href="{{ user.Users.twitter_link }}">
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+    </a>
+    <a href="{{ user.Users.linkedin_link }}">
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>
+</div>
+<hr> {% endmacro %}

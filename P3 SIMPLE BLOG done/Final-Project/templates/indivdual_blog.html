@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<title>Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel=stylesheet type=text/css href="/static/css/recentstyles.css">
+
+<body class="w3-light-grey">
+    <div class="w3-bar w3-black w3-hide-small">
+        {% import 'partials/nav.html' as nav_macro %} {{ nav_macro.nav_component(current_user) }} {% import 'partials/background_card.html' as backgroundcard_macro %} {{ backgroundcard_macro.backgroundcard_component(title) }}
+    </div>
+    <div class="w3-content" style="max-width:1600px">
+        <!-- Grid -->
+        <div class="w3-row w3-padding w3-border">
+            <div class="w3-col l8 s12">
+                <!-- Blog entries -->
+
+                {% import 'partials/edit_blog.html' as edit_blog_macro %} {{ edit_blog_macro.edit_blog_component(single_blog, allow_edit) }}
+                <!-- END BLOG ENTRY -->
+            </div>
+            <!-- Information menu -->
+            <div class="w3-col l4">
+                <!-- Advertising -->
+                <div class="w3-white w3-margin">
+                    {% import 'partials/advertising.html' as advertising_macro %} {{ advertising_macro.advertising_component() }}
+                </div>
+                <hr>
+                <!--  Subscribe -->
+                <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                        <h4>Subscribe</h4>
+                    </div>
+                    <div class="w3-container w3-white">
+                        <p>
+                            <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About Card -->
+                <div class="w3-white w3-margin">
+                    <img src="/static/images/{{single_blog.Users.profile_pic}}" alt="Jane" style="width:100%" class="w3-grayscale about-image">
+                    <div class="w3-container w3-black">
+                        <h4>{{single_blog.Users.first_name}} {{single_blog.Users.last_name}}</h4>
+                        <p>{{single_blog.Users.about}}</p>
+                    </div>
+                </div>
+                <hr>
+                <!-- Posts -->
+                <div class="w3-white w3-margin">
+                    {% import 'partials/popular_posts.html' as popular_posts_macro %} {{ popular_posts_macro.popular_posts_component() }}
+                </div>
+                <hr>
+
+                <!-- Tags -->
+                <div class="w3-white w3-margin">
+                    {% import 'partials/tags.html' as tags_macro %} {{ tags_macro.tags_component() }}
+                </div>
+                <hr>
+
+                <!--  Inspiration -->
+                <div class="w3-white w3-margin">
+                    {% import 'partials/inspiration.html' as inspiration_macro %} {{ inspiration_macro.inspiration_component() }}
+                </div>
+                <hr>
+                <div class="w3-white w3-margin">
+                    {% import 'partials/users_socials.html' as users_socials_macro %} {% for user in blogs %} {% if loop.index == 1 %} {{ users_socials_macro.users_socials_component(user) }} {% endif %} {% endfor %}
+
+                </div>
+                <hr>
+                <!-- END About/Intro Menu -->
+            </div>
+            <!-- END GRID -->
+        </div>
+        <!-- END w3-content -->
+    </div>
+
+
+
+    <!-- Subscribe Modal -->
+    <div id="subscribe" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content" style="padding:32px">
+            <div class="w3-container w3-white">
+                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+                <p>
+                    <input class="w3-input w3-border" type="text" placeholder="Enter e-mail">
+                </p>
+                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey" style="padding:32px">
+        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    </footer>
+
+</body>
+
+</html>

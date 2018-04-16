@@ -1,0 +1,14 @@
+{% macro header_component(messages) %}
+
+<!-- identical to register -->
+<nav class="recent-nav w3-bar w3-hide-small">
+    <a href="{{url_for('register')}}" class="w3-bar-item w3-button">Register</a>
+    <a href="{{url_for('login')}}" class="w3-bar-item w3-button">Login</a>
+</nav>
+<img class="w3-image" src="/static/images/recentbackground.jpg" alt="Fashion Blog" width="1600" height="1060"> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+<div class="w3-display-topright w3-panel w3-red">
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-yellow w3-large w3-display-topright">&times;</span>
+    <h3>Alert!</h3>
+    <p>{{ message }}</p>
+</div>
+{% endfor %} {% endif %} {% endwith %} {% endmacro %}

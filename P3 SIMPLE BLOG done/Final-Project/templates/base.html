@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Popular Blogs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+<link rel=stylesheet type=text/css href="/static/css/recentstyles.css">
+
+<body class="w3-light-grey">
+    {% if current_user.is_authenticated %} {% endif %} {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <div class="w3-container w3-panel w3-green">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-yellow w3-large w3-display-topright">&times;</span>
+        <h3>Success!</h3>
+        <p>{{ message }}</p>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width:1600px">
+        <!-- Image header -->
+        {% block content %} {% endblock %}
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey" style="padding:32px">
+        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    </footer>
+    <script>
+        // Toggle between hiding and showing blog replies/comments
+        // fix this evenutally
+        document.getElementById("myBtn").click();
+
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function likeFunction(x) {
+            x.style.fontWeight = "bold";
+            x.innerHTML = "✓ Liked";
+        }
+    </script>
+</body>
+
+</html>

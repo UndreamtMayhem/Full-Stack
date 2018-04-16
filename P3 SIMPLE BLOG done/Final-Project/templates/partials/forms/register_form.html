@@ -1,0 +1,38 @@
+{% macro register_component() -%}
+
+<form class="w3-container w3-card-4" action="{{url_for('register')}}" method='POST'>
+    <p>
+        <label>Username</label>
+        <input class="w3-input w3-border" type="text" name='username' id='username' placeholder='Username' style="width:90%" required minlength="1" maxlength="150">
+    </p>
+    <p>
+        <label>Email</label>
+        <input class="w3-input w3-border" type="email" name="email" id="email" placeholder='Email' style="width:90%" required>
+    </p>
+    <p>
+        <label>First Name</label>
+        <input class="w3-input w3-border" type="text" name='first_name' id='first_name' placeholder='First Name' style="width:90%" required>
+    </p>
+    <p>
+        <label>Last Name</label>
+        <input class="w3-input w3-border" type="text" name='last_name' id='last_name' placeholder='Last Name' style="width:90%" required>
+    </p>
+    <p>
+        <label>About</label>
+        <textarea class="w3-input w3-border" type="text" name="about" id="about" style="width:90%" required></textarea>
+    </p>
+    <p>
+        <label>Password</label>
+        <input class="w3-input w3-border" type="password" name='pw' id='pw' placeholder='password' style="width:90%" required>
+    </p>
+    <p>
+        <label>Confirm Password</label>
+        <input class="w3-input w3-border" type="password" name='pw1' id='pw1' placeholder='Confirm Password' style="width:90%" required>
+    </p>
+    <p>
+        <button class="w3-button w3-section w3-teal w3-ripple" type="submit"> Register </button>
+        <a class="w3-button w3-section w3-teal w3-ripple" href="{{url_for('login')}}">Login</a>
+    </p>
+    </p>
+</form>
+{%- endmacro %}

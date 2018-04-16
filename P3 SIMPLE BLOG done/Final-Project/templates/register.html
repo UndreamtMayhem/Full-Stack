@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% import 'partials/head.html' as head_macro %} {{ head_macro.head_component("Register") }}
+
+<body>
+    <!-- Image header -->
+    <header class="w3-display-container w3-wide" id="home">
+        {% import 'partials/header_login_register.html' as header_macro %} {{ header_macro.header_component(messages) }}
+
+        <div class="w3-display-topmiddle w3-padding-large">
+            <h1 class=" w3-text-white w3-hide-small">
+                <b>Register</b>
+            </h1>
+            <div class="w3-container w3-margin-top w3-gray">
+                {% import 'partials/forms/register_form.html' as registerform_macro %} {{ registerform_macro.register_component() }}
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+ {% macro about_component(current_user, curruser) -%}
+
+<!-- About Card -->
+<img src="/static/images/userprofile.png" alt="Jane" style="width:100%" class="w3-grayscale about-image">
+<div class="w3-container w3-black">
+    <h4>{{ curruser.first_name }} {{ curruser.last_name }}</h4>
+    <p>{{ curruser.about }}!</p>
+    <button class="w3-button w3-black w3-padding-14" id="myBtn">
+        <b>Edit Profile</b>
+    </button>
+</div>
+<hr> {%- endmacro %}

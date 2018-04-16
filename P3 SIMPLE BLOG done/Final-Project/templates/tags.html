@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- Image header -->
+<header class="w3-display-container w3-wide" id="home">
+    {% import 'partials/nav.html' as nav_macro %} {{ nav_macro.nav_component(current_user) }} {% import 'partials/background_card.html' as backgroundcard_macro %} {{ backgroundcard_macro.backgroundcard_component(title) }}
+
+</header>
+
+<!-- Grid -->
+<div class="w3-row w3-padding w3-border">
+
+    <!-- About/Information menu -->
+    <div class="w3-col l12">
+
+        <!-- Tags -->
+        <div class="w3-white w3-margin">
+            <div class="w3-container w3-padding w3-black">
+                <h4>Popular Tags</h4>
+            </div>
+            <div class="w3-container w3-white">
+                <p>
+                    {% for tag in tags %} {% if loop.index == 1 %}
+                    <a href="/blogs/tags/{{tag.tagname}}">
+                        <span class="w3-tag w3-black w3-margin-bottom">{{tag.tagname}}</span>
+                    </a> {% else %}
+                    <a href="/blogs/tags/{{tag.tagname}}">
+                        <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">{{tag.tagname}}</span>
+                    </a> {% endif %} {% endfor %}
+                </p>
+            </div>
+        </div>
+        <hr>
+        <!-- Advertising -->
+        <div class="w3-white w3-margin">
+            {% import 'partials/advertising.html' as advertising_macro %} {{ advertising_macro.advertising_component() }}
+
+        </div>
+        <hr>
+    </div>
+</div>
+{% endblock %}

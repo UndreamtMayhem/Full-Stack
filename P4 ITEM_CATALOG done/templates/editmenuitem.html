@@ -1,0 +1,78 @@
+{% extends "./partial/base.html" %} {% block title %}About{% endblock %} {% block tabs %} {% endblock %} {% block content %}
+<section class="edit-section container">
+    <div class="menu-heading">
+        <h1> Edit Menu Item </h1>
+        <hr/>
+    </div>
+    <form action="#" method='post'>
+        <div class="field">
+            <label class="label">Name:</label>
+            <div class="control">
+                <input type='text' size='30' name='name' value='{{item.name }}'>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Description:</label>
+            <div class="control">
+                <input type='text' size='30' name='description' value='{{item.description}}'>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Price:</label>
+            <div class="control">
+                <input type='text' size='30' name='price' value='{{item.price}}'>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Course:</label>{% if item.course == 'Appetizer' %}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Appetizer' checked>Appetizer</dd>
+            </div>
+            {%else%}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Appetizer'>Appetizer</dd>
+            </div>
+            {% endif %} {% if item.course == 'Entree' %}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Entree' checked>Entree</dd>
+            </div>
+            {%else%}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Entree'>Entree</dd>
+            </div>
+            {% endif %} {% if item.course == 'Dessert'%}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Dessert' checked>Dessert</dd>
+            </div>
+            {% else %}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Dessert'>Dessert</dd>
+            </div>
+            {% endif %} {%if item.course =='Beverage'%}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Beverage' checked>Beverage</dd>
+            </div>
+            {% else %}
+            <div class="control">
+                <dd>
+                    <input type='radio' name='course' value='Beverage'>Beverage</dd>
+            </div>
+            {% endif %}
+        </div>
+        <div class="field is-grouped">
+            <p class="control">
+                <input class="button is-primary" type='submit' value='Edit'>
+            </p>
+            <p class="control">
+                <a class="button is-light" href='{{url_for(' menu_restaurants ')}}'> Cancel </a>
+            </p>
+        </div>
+    </form>
+</section>{% endblock %}
