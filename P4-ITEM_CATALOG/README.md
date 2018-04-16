@@ -4,8 +4,7 @@
 
 
 Homepage
-
-![logo](https://github.com/UndreamtMayhem/Udacity-Full-Stack-Unfinished/blob/master/P1%20MOVIE%20TRAILER%20WEBSITE%20done/Project%20images/movie%20trailer%20design.PNG "didnt read")
+add codepen link
 
 
 ## description of project
@@ -26,11 +25,11 @@ Install flask : sudo pip install Flask
 Dependencies:
 * SQL Alchemy
 * Template engine: http://jinja.pocoo.org/docs/2.10/templates/
-### Getting Started
-1. run python3 database_setup.py to create the database
-2. run python3 lotsofmenus.py to populate the database
-3. run python3 ./item-catalog.py and navigate to localhost:5000 in your browser
 
+### Getting Started
+1. run `python3 database_setup.py to create the database
+2. run `python3 lotsofmenus.py to populate the database
+3. run `python3 ./item-catalog.py and navigate to localhost:5000 in your browser
 
 ### Whats used 
 - Python v3
@@ -62,9 +61,7 @@ Dependencies:
 - /restaurant/<int:restaurant_id>/menu/<int:menu_id>/edit
 - /restaurant/<int:restaurant_id>/menu/<int:menu_id>/delete
 
-
-
-# Future requirements
+### Future requirements
 * Tidy up design
 * Add more json routes
 * Potentially rename Menu to recipe

@@ -1,4 +1,5 @@
 # Udacity Full Stack Project
+
 ##Project: Neighborhood Map
 You will develop a single-page application featuring a map of your neighborhood or a 
 neighborhood you would like to visit. You will then add additional functionality to 
@@ -13,12 +14,13 @@ I am aimed to make mine a Google maps clone
 
 ### Installation
 Install dependencies
-` npm install
 
-start mongod
+`npm install
+
+`start mongod
 
 populate db: mongoimport 
- --db neighbourhood --collection places --jsonArray all.json
+ `--db neighbourhood --collection places --jsonArray all.json
 
 ` npm start
 
@@ -39,4 +41,4 @@ populate db: mongoimport
 - /
 
 ### Model
-- Uses Json files 
+- Uses mongo db that has json file imported
