@@ -24,3 +24,5 @@ Install dependencies
 ### Routes
 - /
 
+### Model
+- Uses Json files 
