@@ -2,8 +2,7 @@
 
 ## Movie Trailer
 Homepage
-
-![logo](https://github.com/UndreamtMayhem/Udacity-Full-Stack-Unfinished/blob/master/P1%20MOVIE%20TRAILER%20WEBSITE%20done/Project%20images/movie%20trailer%20design.PNG "didnt read")
+add codepen
 
 ### Installation
 
