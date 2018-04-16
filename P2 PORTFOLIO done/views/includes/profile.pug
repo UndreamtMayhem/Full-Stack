@@ -5,18 +5,18 @@ header.about-header
               h1.info.name.text-center Daniel Johnson:
               h3.info Web Developer - Front-End
           .row
-            img.img-circle.img-responsive.profile-pic.hidden-xs.hidden-sm(src='./img/' + about.image, alt='')
+            img.img-circle.img-responsive.profile-pic.hidden-xs.hidden-sm(src='./img/' + profile.image, alt='')
           .row
             .btn-grouped
-              each but in about.links
+              each but in profile.links
                 a.zocial.icon(class=but.name, href=but.url)
           .row
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               h2 Profile
-              p.about=about.description
+              p.about=profile.description
           .row
             .col-xs-12.col-sm-12.col-md-12.col-lg-12
               h2 Technical Skills
               ul.skill-list
-                each skill in about.skills
+                each skill in profile.skills
                   li.skill-item=skill
