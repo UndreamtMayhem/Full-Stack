@@ -3,9 +3,12 @@
 ## Portfolio
 
 ### Installation
+
 Install dependencies
-` npm install
-` npm start
+
+`npm install
+`npm start
+
 ### Whats used 
 - Node
 - Express

@@ -1,81 +1,92 @@
 # Full-Stack
 
-#Project one Movie trailer 
-Mocking 
-- Done but very basic 
-Database
-Routing 
-Templates and forms
-CRUD functionality 
-API Endpoint
-Styling and messaging
+## 1. Movie trailer Django
 
+Overview
+- Python v3
+- Django v1.11
+- Styling
+    - CSS
+    - Bootstrap 4
+    - fontawesome
+- JS
+    - Bootstrap js
+    - Jquery
+    - popper js
 
+## 2. Portfolio Node express
 
-adjust the template for tablet and pcs 
-Scaffold the rest of the sites 
-Need to rename row divs 
+Overview
+- Node
+- Express
+- Styling
+    - PUG
+    - CSS
+    - Bootstrap 3
+    - fontawesome
+- JS
+    - Bootstrap js
+    - Jquery
+    - popper js
+    - Custom Js resume building
+    - js helper
 
-#Portfolio two Site Flask
-Mocking 
-- done
-Database
--
-Routing 
--
-Templates and forms
-- 
-CRUD functionality 
--
-Styling and messaging
-- 
+## 3. Multi-user blog Flask 
 
-# Bonus flask sites 
-- tech blog in flask convert
-- restarant menu build
+Overview
+- Python v3
+- Flask
+- SQL alchemy
+- Styling
+    - CSS
+    - W3 school css
+- JS
+    - custom js inlined on landing page
+- python 
+    - password.py: uses pbkdf2_sha256
+        - random salt
+        - create password
+        - validate password
+        - make salt
+    - create data and populate database
+    - /CreateData
 
+## 4. item Catalog flask
 
-# Multi-user blog project three
-Mocking 
-- done
-Database
--
-Routing 
--
-Templates and forms
-- 
-CRUD functionality 
--
-Styling
+Overview
+- Python v3
+- Flask v1.11
+- SQL Alchemy
+- Styling
+    - CSS
+    - Bulma css
+    - fontawesome
+- JS
+    - Jquery
 
+## 5. Swish Tournament Flask
 
-#Tournament Website 
-Mocking 
-- Done but very basic 
-Database
-Routing 
-Templates and forms
-CRUD functionality 
-API Endpoint
-Styling and messaging
+Overview
+- Python v3
+- Flask v1.11
+- SQL Alchemy
+- Styling
+    - bootstrap 4
+    - fontawesome
+- JS
+    - Jquery
+ 
+## 6. neighbourhood project node express
 
-#item Catalog 
-Mocking 
-- Done but very basic 
-Database
-Routing 
-Templates and forms
-CRUD functionality 
-API Endpoint
-Styling and messaging
-
-# convert neighbourhood project
-Mocking 
-- Done but very basic 
-Database
-Routing 
-Templates and forms
-CRUD functionality 
-API Endpoint
-Styling and messaging
-
+Overview
+- Node
+- Express
+- Styling
+    - EJS
+    - CSS
+- JS
+    - Local Storage
+    - Google Maps 
+    - Node, Express, EJS 
+    - Jquery, jquery ui 
+    - zango indexed db

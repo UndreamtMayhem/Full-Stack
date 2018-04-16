@@ -4,9 +4,7 @@
 I wanted to focus more on Database functionality like SQL alchemy and password libraries
 
 Homepage
-
-![logo](https://github.com/UndreamtMayhem/Udacity-Full-Stack-Unfinished/blob/master/P3%20SIMPLE%20BLOG%20done/Project%20Images/blogindex.PNG "didnt read")
-
+Add code pen link
 
 ### Installation
 1. run blog_setup.py to create the database
