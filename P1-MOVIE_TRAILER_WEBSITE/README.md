@@ -1,23 +1,29 @@
 # Full-Stack Udacity Project 1
 
 ## Movie Trailer
+Homepage
+
+![logo](https://github.com/UndreamtMayhem/Udacity-Full-Stack-Unfinished/blob/master/P1%20MOVIE%20TRAILER%20WEBSITE%20done/Project%20images/movie%20trailer%20design.PNG "didnt read")
 
 ### Installation
 
 Windows 
 
 ` cd to ..\env\Scripts  folder
+
 ` activate
+
 ` cd ..\ProjectMovieTrailer\mymovietrailersite 
+
 ` python manage.py runserver
 
-open browser navigate to
-` 127.0.0.1:8000/
+open browser navigate to ` 127.0.0.1:8000/
 
 
 Linux
 
 ` cd to ../env/Scripts  folder
+
 ` source activate
 
 ` cd /ProjectMovieTrailer/mymovietrailersite
@@ -25,8 +31,7 @@ Linux
 ` python manage.py runserver
 
 
-open browser navigate to
-` 127.0.0.1:8000/
+open browser navigate to ` 127.0.0.1:8000/
 
 ### Whats used 
 - Python v3
@@ -65,8 +70,3 @@ open browser navigate to
 - top10
 - year/<year:2018>
 - years/
-
-###
-Homepage
-
-![logo](https://github.com/UndreamtMayhem/Udacity-Full-Stack-Unfinished/blob/master/P1%20MOVIE%20TRAILER%20WEBSITE%20done/Project%20images/movie%20trailer%20design.PNG"didnt read")

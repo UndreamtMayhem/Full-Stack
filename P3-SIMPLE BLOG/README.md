@@ -10,10 +10,10 @@ Homepage
 
 ### Installation
 1. run blog_setup.py to create the database
-` $ python blog_setup.py
+`$ python blog_setup.py
 
 2. run populateblogs.py to populate the database
-` $ python populateblogs.py
+`$ python populateblogs.py
 
 3. run python3 simpleblog.py and navigate to http://127.0.0.1:5000/ in your browser
 
